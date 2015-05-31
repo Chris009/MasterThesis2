@@ -1,0 +1,26 @@
+﻿body {
+}
+
+table{
+    color:white;
+    background-color: rgba(0,0,0,0.8);
+    border: 2px solid white;
+    border-radius: 2px 2px 2px 2px;
+}
+
+.scrollable{
+    overflow:auto;
+    height:800px;
+}
+
+.scoreCell{
+    text-align:center;
+}
+
+.scoreTh{
+    text-align:center;
+}
+
+.fristTr{
+    background-color: black;
+}

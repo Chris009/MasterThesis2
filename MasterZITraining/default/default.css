@@ -1,0 +1,28 @@
+﻿body {
+    background: url("../img/background.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding-top: 70px;
+}
+
+.navbutton{    
+    outline:none;
+    background: transparent;
+    border: none !important;
+}
+
+.navbutton::-moz-focus-inner {
+   border: 0;
+}
+
+.navicon{
+    margin-right: 15px;
+    color: white;
+    height:50px;
+    font-size: 35px;
+    line-height: 50px;
+}
+
+.navicon:hover{
+    color: rgba(150,150,150,0.5);
+}

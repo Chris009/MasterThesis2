@@ -1,0 +1,50 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title></title>
+    <script type="text/javascript" src="http://ecn.dev.virtualearth.net/mapcontrol/mapcontrol.ashx?v=7.0&mkt=de-de"></script>
+    <link href="../../Content/bootstrap.css" rel="stylesheet" />
+    <link href="../../default/default.css" rel="stylesheet" />
+
+    <script src="story.js"></script>
+    <link href="story.css" rel="stylesheet" />
+    
+</head>
+<body onload="getMap()">
+
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" onclick="homeNav()" class="navbutton" aria-label="Left Align">
+                    <span class="navicon glyphicon glyphicon-arrow-left" aria-hidden="true"></span>
+                </button>
+                <button type="button" onclick="homeNav()" class="navbutton" aria-label="Left Align">
+                    <span class="navicon glyphicon glyphicon-home" aria-hidden="true"></span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+
+    <div class="objective_box list-group">
+        <h3 class="list-group-item-heading">
+            Objectives Day X
+        </h3>
+        <div class="list-group-item">For your start of the day, go to a local Coffee-Shop to get something to drink</div>
+        <div class="list-group-item">B</div>
+        <div class="list-group-item">C</div>
+        <div class="list-group-item">D</div>
+        <div class="list-group-item">A</div>
+        <div class="list-group-item">B</div>
+        <div class="list-group-item">C</div>
+        <div class="list-group-item">D</div>
+    </div>
+
+    <div id='myMap' class="map"></div>
+
+
+    <script src="../../Scripts/jquery-1.9.1.min.js"></script>
+    <script src="../../Scripts/bootstrap.min.js"></script>
+</body>
+</html>

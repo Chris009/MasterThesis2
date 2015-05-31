@@ -1,0 +1,409 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{785C93D7-0D1F-4A13-BDC7-6917A5F8288F}</ProjectGuid>
+    <ProjectGuid>{785C93D7-0D1F-4A13-BDC7-6917A5F8288F}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>html5up</RootNamespace>
+    <AssemblyName>html5up</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Content\bootstrap-theme.css.map" />
+    <Content Include="Content\bootstrap.css.map" />
+    <Content Include="default\Hover-master\.editorconfig" />
+    <Content Include="default\Hover-master\bower.json" />
+    <Content Include="default\Hover-master\CONTRIBUTING.md" />
+    <Content Include="default\Hover-master\HISTORY.md" />
+    <Content Include="default\Hover-master\less\effects\2d-transitions\_bob.less" />
+    <Content Include="default\Hover-master\less\effects\2d-transitions\_bounce-in.less" />
+    <Content Include="default\Hover-master\less\effects\2d-transitions\_bounce-out.less" />
+    <Content Include="default\Hover-master\less\effects\2d-transitions\_buzz-out.less" />
+    <Content Include="default\Hover-master\less\effects\2d-transitions\_buzz.less" />
+    <Content Include="default\Hover-master\less\effects\2d-transitions\_float.less" />
+    <Content Include="default\Hover-master\less\effects\2d-transitions\_grow-rotate.less" />
+    <Content Include="default\Hover-master\less\effects\2d-transitions\_grow.less" />
+    <Content Include="default\Hover-master\less\effects\2d-transitions\_hang.less" />
+    <Content Include="default\Hover-master\less\effects\2d-transitions\_pop.less" />
+    <Content Include="default\Hover-master\less\effects\2d-transitions\_pulse-grow.less" />
+    <Content Include="default\Hover-master\less\effects\2d-transitions\_pulse-shrink.less" />
+    <Content Include="default\Hover-master\less\effects\2d-transitions\_pulse.less" />
+    <Content Include="default\Hover-master\less\effects\2d-transitions\_push.less" />
+    <Content Include="default\Hover-master\less\effects\2d-transitions\_rotate.less" />
+    <Content Include="default\Hover-master\less\effects\2d-transitions\_shrink.less" />
+    <Content Include="default\Hover-master\less\effects\2d-transitions\_sink.less" />
+    <Content Include="default\Hover-master\less\effects\2d-transitions\_skew-backward.less" />
+    <Content Include="default\Hover-master\less\effects\2d-transitions\_skew-forward.less" />
+    <Content Include="default\Hover-master\less\effects\2d-transitions\_skew.less" />
+    <Content Include="default\Hover-master\less\effects\2d-transitions\_wobble-bottom.less" />
+    <Content Include="default\Hover-master\less\effects\2d-transitions\_wobble-horizontal.less" />
+    <Content Include="default\Hover-master\less\effects\2d-transitions\_wobble-skew.less" />
+    <Content Include="default\Hover-master\less\effects\2d-transitions\_wobble-to-bottom-right.less" />
+    <Content Include="default\Hover-master\less\effects\2d-transitions\_wobble-to-top-right.less" />
+    <Content Include="default\Hover-master\less\effects\2d-transitions\_wobble-top.less" />
+    <Content Include="default\Hover-master\less\effects\2d-transitions\_wobble-vertical.less" />
+    <Content Include="default\Hover-master\less\effects\background-transitions\_back-pulse.less" />
+    <Content Include="default\Hover-master\less\effects\background-transitions\_bounce-to-bottom.less" />
+    <Content Include="default\Hover-master\less\effects\background-transitions\_bounce-to-left.less" />
+    <Content Include="default\Hover-master\less\effects\background-transitions\_bounce-to-right.less" />
+    <Content Include="default\Hover-master\less\effects\background-transitions\_bounce-to-top.less" />
+    <Content Include="default\Hover-master\less\effects\background-transitions\_fade.less" />
+    <Content Include="default\Hover-master\less\effects\background-transitions\_radial-in.less" />
+    <Content Include="default\Hover-master\less\effects\background-transitions\_radial-out.less" />
+    <Content Include="default\Hover-master\less\effects\background-transitions\_rectangle-in.less" />
+    <Content Include="default\Hover-master\less\effects\background-transitions\_rectangle-out.less" />
+    <Content Include="default\Hover-master\less\effects\background-transitions\_shutter-in-horizontal.less" />
+    <Content Include="default\Hover-master\less\effects\background-transitions\_shutter-in-vertical.less" />
+    <Content Include="default\Hover-master\less\effects\background-transitions\_shutter-out-horizontal.less" />
+    <Content Include="default\Hover-master\less\effects\background-transitions\_shutter-out-vertical.less" />
+    <Content Include="default\Hover-master\less\effects\background-transitions\_sweep-to-bottom.less" />
+    <Content Include="default\Hover-master\less\effects\background-transitions\_sweep-to-left.less" />
+    <Content Include="default\Hover-master\less\effects\background-transitions\_sweep-to-right.less" />
+    <Content Include="default\Hover-master\less\effects\background-transitions\_sweep-to-top.less" />
+    <Content Include="default\Hover-master\less\effects\border-transitions\_border-fade.less" />
+    <Content Include="default\Hover-master\less\effects\border-transitions\_hollow.less" />
+    <Content Include="default\Hover-master\less\effects\border-transitions\_outline-in.less" />
+    <Content Include="default\Hover-master\less\effects\border-transitions\_outline-out.less" />
+    <Content Include="default\Hover-master\less\effects\border-transitions\_overline-from-center.less" />
+    <Content Include="default\Hover-master\less\effects\border-transitions\_overline-from-left.less" />
+    <Content Include="default\Hover-master\less\effects\border-transitions\_overline-from-right.less" />
+    <Content Include="default\Hover-master\less\effects\border-transitions\_overline-reveal.less" />
+    <Content Include="default\Hover-master\less\effects\border-transitions\_reveal.less" />
+    <Content Include="default\Hover-master\less\effects\border-transitions\_ripple-in.less" />
+    <Content Include="default\Hover-master\less\effects\border-transitions\_ripple-out.less" />
+    <Content Include="default\Hover-master\less\effects\border-transitions\_round-corners.less" />
+    <Content Include="default\Hover-master\less\effects\border-transitions\_trim.less" />
+    <Content Include="default\Hover-master\less\effects\border-transitions\_underline-from-center.less" />
+    <Content Include="default\Hover-master\less\effects\border-transitions\_underline-from-left.less" />
+    <Content Include="default\Hover-master\less\effects\border-transitions\_underline-from-right.less" />
+    <Content Include="default\Hover-master\less\effects\border-transitions\_underline-reveal.less" />
+    <Content Include="default\Hover-master\less\effects\curls\_curl-bottom-left.less" />
+    <Content Include="default\Hover-master\less\effects\curls\_curl-bottom-right.less" />
+    <Content Include="default\Hover-master\less\effects\curls\_curl-top-left.less" />
+    <Content Include="default\Hover-master\less\effects\curls\_curl-top-right.less" />
+    <Content Include="default\Hover-master\less\effects\icons\_icon-back.less" />
+    <Content Include="default\Hover-master\less\effects\icons\_icon-bob.less" />
+    <Content Include="default\Hover-master\less\effects\icons\_icon-bounce-out.less" />
+    <Content Include="default\Hover-master\less\effects\icons\_icon-bounce.less" />
+    <Content Include="default\Hover-master\less\effects\icons\_icon-buzz-out.less" />
+    <Content Include="default\Hover-master\less\effects\icons\_icon-buzz.less" />
+    <Content Include="default\Hover-master\less\effects\icons\_icon-down.less" />
+    <Content Include="default\Hover-master\less\effects\icons\_icon-drop.less" />
+    <Content Include="default\Hover-master\less\effects\icons\_icon-fade.less" />
+    <Content Include="default\Hover-master\less\effects\icons\_icon-float-away.less" />
+    <Content Include="default\Hover-master\less\effects\icons\_icon-float.less" />
+    <Content Include="default\Hover-master\less\effects\icons\_icon-forward.less" />
+    <Content Include="default\Hover-master\less\effects\icons\_icon-grow-rotate.less" />
+    <Content Include="default\Hover-master\less\effects\icons\_icon-grow.less" />
+    <Content Include="default\Hover-master\less\effects\icons\_icon-hang.less" />
+    <Content Include="default\Hover-master\less\effects\icons\_icon-pop.less" />
+    <Content Include="default\Hover-master\less\effects\icons\_icon-pulse-grow.less" />
+    <Content Include="default\Hover-master\less\effects\icons\_icon-pulse-shrink.less" />
+    <Content Include="default\Hover-master\less\effects\icons\_icon-pulse.less" />
+    <Content Include="default\Hover-master\less\effects\icons\_icon-push.less" />
+    <Content Include="default\Hover-master\less\effects\icons\_icon-rotate.less" />
+    <Content Include="default\Hover-master\less\effects\icons\_icon-shrink.less" />
+    <Content Include="default\Hover-master\less\effects\icons\_icon-sink-away.less" />
+    <Content Include="default\Hover-master\less\effects\icons\_icon-sink.less" />
+    <Content Include="default\Hover-master\less\effects\icons\_icon-spin.less" />
+    <Content Include="default\Hover-master\less\effects\icons\_icon-up.less" />
+    <Content Include="default\Hover-master\less\effects\icons\_icon-wobble-horizontal.less" />
+    <Content Include="default\Hover-master\less\effects\icons\_icon-wobble-vertical.less" />
+    <Content Include="default\Hover-master\less\effects\shadow-and-glow-transitions\_box-shadow-inset.less" />
+    <Content Include="default\Hover-master\less\effects\shadow-and-glow-transitions\_box-shadow-outset.less" />
+    <Content Include="default\Hover-master\less\effects\shadow-and-glow-transitions\_float-shadow.less" />
+    <Content Include="default\Hover-master\less\effects\shadow-and-glow-transitions\_glow.less" />
+    <Content Include="default\Hover-master\less\effects\shadow-and-glow-transitions\_grow-shadow.less" />
+    <Content Include="default\Hover-master\less\effects\shadow-and-glow-transitions\_shadow-radial.less" />
+    <Content Include="default\Hover-master\less\effects\shadow-and-glow-transitions\_shadow.less" />
+    <Content Include="default\Hover-master\less\effects\speech-bubbles\_bubble-bottom.less" />
+    <Content Include="default\Hover-master\less\effects\speech-bubbles\_bubble-float-bottom.less" />
+    <Content Include="default\Hover-master\less\effects\speech-bubbles\_bubble-float-left.less" />
+    <Content Include="default\Hover-master\less\effects\speech-bubbles\_bubble-float-right.less" />
+    <Content Include="default\Hover-master\less\effects\speech-bubbles\_bubble-float-top.less" />
+    <Content Include="default\Hover-master\less\effects\speech-bubbles\_bubble-left.less" />
+    <Content Include="default\Hover-master\less\effects\speech-bubbles\_bubble-right.less" />
+    <Content Include="default\Hover-master\less\effects\speech-bubbles\_bubble-top.less" />
+    <Content Include="default\Hover-master\less\hover.less" />
+    <Content Include="default\Hover-master\less\_hacks.less" />
+    <Content Include="default\Hover-master\less\_mixins.less" />
+    <Content Include="default\Hover-master\less\_options.less" />
+    <Content Include="default\Hover-master\package.json" />
+    <Content Include="default\Hover-master\README.md" />
+    <Content Include="default\Hover-master\scss\effects\2d-transitions\_bob.scss" />
+    <Content Include="default\Hover-master\scss\effects\2d-transitions\_bounce-in.scss" />
+    <Content Include="default\Hover-master\scss\effects\2d-transitions\_bounce-out.scss" />
+    <Content Include="default\Hover-master\scss\effects\2d-transitions\_buzz-out.scss" />
+    <Content Include="default\Hover-master\scss\effects\2d-transitions\_buzz.scss" />
+    <Content Include="default\Hover-master\scss\effects\2d-transitions\_float.scss" />
+    <Content Include="default\Hover-master\scss\effects\2d-transitions\_grow-rotate.scss" />
+    <Content Include="default\Hover-master\scss\effects\2d-transitions\_grow.scss" />
+    <Content Include="default\Hover-master\scss\effects\2d-transitions\_hang.scss" />
+    <Content Include="default\Hover-master\scss\effects\2d-transitions\_pop.scss" />
+    <Content Include="default\Hover-master\scss\effects\2d-transitions\_pulse-grow.scss" />
+    <Content Include="default\Hover-master\scss\effects\2d-transitions\_pulse-shrink.scss" />
+    <Content Include="default\Hover-master\scss\effects\2d-transitions\_pulse.scss" />
+    <Content Include="default\Hover-master\scss\effects\2d-transitions\_push.scss" />
+    <Content Include="default\Hover-master\scss\effects\2d-transitions\_rotate.scss" />
+    <Content Include="default\Hover-master\scss\effects\2d-transitions\_shrink.scss" />
+    <Content Include="default\Hover-master\scss\effects\2d-transitions\_sink.scss" />
+    <Content Include="default\Hover-master\scss\effects\2d-transitions\_skew-backward.scss" />
+    <Content Include="default\Hover-master\scss\effects\2d-transitions\_skew-forward.scss" />
+    <Content Include="default\Hover-master\scss\effects\2d-transitions\_skew.scss" />
+    <Content Include="default\Hover-master\scss\effects\2d-transitions\_wobble-bottom.scss" />
+    <Content Include="default\Hover-master\scss\effects\2d-transitions\_wobble-horizontal.scss" />
+    <Content Include="default\Hover-master\scss\effects\2d-transitions\_wobble-skew.scss" />
+    <Content Include="default\Hover-master\scss\effects\2d-transitions\_wobble-to-bottom-right.scss" />
+    <Content Include="default\Hover-master\scss\effects\2d-transitions\_wobble-to-top-right.scss" />
+    <Content Include="default\Hover-master\scss\effects\2d-transitions\_wobble-top.scss" />
+    <Content Include="default\Hover-master\scss\effects\2d-transitions\_wobble-vertical.scss" />
+    <Content Include="default\Hover-master\scss\effects\background-transitions\_back-pulse.scss" />
+    <Content Include="default\Hover-master\scss\effects\background-transitions\_bounce-to-bottom.scss" />
+    <Content Include="default\Hover-master\scss\effects\background-transitions\_bounce-to-left.scss" />
+    <Content Include="default\Hover-master\scss\effects\background-transitions\_bounce-to-right.scss" />
+    <Content Include="default\Hover-master\scss\effects\background-transitions\_bounce-to-top.scss" />
+    <Content Include="default\Hover-master\scss\effects\background-transitions\_fade.scss" />
+    <Content Include="default\Hover-master\scss\effects\background-transitions\_radial-in.scss" />
+    <Content Include="default\Hover-master\scss\effects\background-transitions\_radial-out.scss" />
+    <Content Include="default\Hover-master\scss\effects\background-transitions\_rectangle-in.scss" />
+    <Content Include="default\Hover-master\scss\effects\background-transitions\_rectangle-out.scss" />
+    <Content Include="default\Hover-master\scss\effects\background-transitions\_shutter-in-horizontal.scss" />
+    <Content Include="default\Hover-master\scss\effects\background-transitions\_shutter-in-vertical.scss" />
+    <Content Include="default\Hover-master\scss\effects\background-transitions\_shutter-out-horizontal.scss" />
+    <Content Include="default\Hover-master\scss\effects\background-transitions\_shutter-out-vertical.scss" />
+    <Content Include="default\Hover-master\scss\effects\background-transitions\_sweep-to-bottom.scss" />
+    <Content Include="default\Hover-master\scss\effects\background-transitions\_sweep-to-left.scss" />
+    <Content Include="default\Hover-master\scss\effects\background-transitions\_sweep-to-right.scss" />
+    <Content Include="default\Hover-master\scss\effects\background-transitions\_sweep-to-top.scss" />
+    <Content Include="default\Hover-master\scss\effects\border-transitions\_border-fade.scss" />
+    <Content Include="default\Hover-master\scss\effects\border-transitions\_hollow.scss" />
+    <Content Include="default\Hover-master\scss\effects\border-transitions\_outline-in.scss" />
+    <Content Include="default\Hover-master\scss\effects\border-transitions\_outline-out.scss" />
+    <Content Include="default\Hover-master\scss\effects\border-transitions\_overline-from-center.scss" />
+    <Content Include="default\Hover-master\scss\effects\border-transitions\_overline-from-left.scss" />
+    <Content Include="default\Hover-master\scss\effects\border-transitions\_overline-from-right.scss" />
+    <Content Include="default\Hover-master\scss\effects\border-transitions\_overline-reveal.scss" />
+    <Content Include="default\Hover-master\scss\effects\border-transitions\_reveal.scss" />
+    <Content Include="default\Hover-master\scss\effects\border-transitions\_ripple-in.scss" />
+    <Content Include="default\Hover-master\scss\effects\border-transitions\_ripple-out.scss" />
+    <Content Include="default\Hover-master\scss\effects\border-transitions\_round-corners.scss" />
+    <Content Include="default\Hover-master\scss\effects\border-transitions\_trim.scss" />
+    <Content Include="default\Hover-master\scss\effects\border-transitions\_underline-from-center.scss" />
+    <Content Include="default\Hover-master\scss\effects\border-transitions\_underline-from-left.scss" />
+    <Content Include="default\Hover-master\scss\effects\border-transitions\_underline-from-right.scss" />
+    <Content Include="default\Hover-master\scss\effects\border-transitions\_underline-reveal.scss" />
+    <Content Include="default\Hover-master\scss\effects\curls\_curl-bottom-left.scss" />
+    <Content Include="default\Hover-master\scss\effects\curls\_curl-bottom-right.scss" />
+    <Content Include="default\Hover-master\scss\effects\curls\_curl-top-left.scss" />
+    <Content Include="default\Hover-master\scss\effects\curls\_curl-top-right.scss" />
+    <Content Include="default\Hover-master\scss\effects\icons\_icon-back.scss" />
+    <Content Include="default\Hover-master\scss\effects\icons\_icon-bob.scss" />
+    <Content Include="default\Hover-master\scss\effects\icons\_icon-bounce-out.scss" />
+    <Content Include="default\Hover-master\scss\effects\icons\_icon-bounce.scss" />
+    <Content Include="default\Hover-master\scss\effects\icons\_icon-buzz-out.scss" />
+    <Content Include="default\Hover-master\scss\effects\icons\_icon-buzz.scss" />
+    <Content Include="default\Hover-master\scss\effects\icons\_icon-down.scss" />
+    <Content Include="default\Hover-master\scss\effects\icons\_icon-drop.scss" />
+    <Content Include="default\Hover-master\scss\effects\icons\_icon-fade.scss" />
+    <Content Include="default\Hover-master\scss\effects\icons\_icon-float-away.scss" />
+    <Content Include="default\Hover-master\scss\effects\icons\_icon-float.scss" />
+    <Content Include="default\Hover-master\scss\effects\icons\_icon-forward.scss" />
+    <Content Include="default\Hover-master\scss\effects\icons\_icon-grow-rotate.scss" />
+    <Content Include="default\Hover-master\scss\effects\icons\_icon-grow.scss" />
+    <Content Include="default\Hover-master\scss\effects\icons\_icon-hang.scss" />
+    <Content Include="default\Hover-master\scss\effects\icons\_icon-pop.scss" />
+    <Content Include="default\Hover-master\scss\effects\icons\_icon-pulse-grow.scss" />
+    <Content Include="default\Hover-master\scss\effects\icons\_icon-pulse-shrink.scss" />
+    <Content Include="default\Hover-master\scss\effects\icons\_icon-pulse.scss" />
+    <Content Include="default\Hover-master\scss\effects\icons\_icon-push.scss" />
+    <Content Include="default\Hover-master\scss\effects\icons\_icon-rotate.scss" />
+    <Content Include="default\Hover-master\scss\effects\icons\_icon-shrink.scss" />
+    <Content Include="default\Hover-master\scss\effects\icons\_icon-sink-away.scss" />
+    <Content Include="default\Hover-master\scss\effects\icons\_icon-sink.scss" />
+    <Content Include="default\Hover-master\scss\effects\icons\_icon-spin.scss" />
+    <Content Include="default\Hover-master\scss\effects\icons\_icon-up.scss" />
+    <Content Include="default\Hover-master\scss\effects\icons\_icon-wobble-horizontal.scss" />
+    <Content Include="default\Hover-master\scss\effects\icons\_icon-wobble-vertical.scss" />
+    <Content Include="default\Hover-master\scss\effects\shadow-and-glow-transitions\_box-shadow-inset.scss" />
+    <Content Include="default\Hover-master\scss\effects\shadow-and-glow-transitions\_box-shadow-outset.scss" />
+    <Content Include="default\Hover-master\scss\effects\shadow-and-glow-transitions\_float-shadow.scss" />
+    <Content Include="default\Hover-master\scss\effects\shadow-and-glow-transitions\_glow.scss" />
+    <Content Include="default\Hover-master\scss\effects\shadow-and-glow-transitions\_grow-shadow.scss" />
+    <Content Include="default\Hover-master\scss\effects\shadow-and-glow-transitions\_shadow-radial.scss" />
+    <Content Include="default\Hover-master\scss\effects\shadow-and-glow-transitions\_shadow.scss" />
+    <Content Include="default\Hover-master\scss\effects\speech-bubbles\_bubble-bottom.scss" />
+    <Content Include="default\Hover-master\scss\effects\speech-bubbles\_bubble-float-bottom.scss" />
+    <Content Include="default\Hover-master\scss\effects\speech-bubbles\_bubble-float-left.scss" />
+    <Content Include="default\Hover-master\scss\effects\speech-bubbles\_bubble-float-right.scss" />
+    <Content Include="default\Hover-master\scss\effects\speech-bubbles\_bubble-float-top.scss" />
+    <Content Include="default\Hover-master\scss\effects\speech-bubbles\_bubble-left.scss" />
+    <Content Include="default\Hover-master\scss\effects\speech-bubbles\_bubble-right.scss" />
+    <Content Include="default\Hover-master\scss\effects\speech-bubbles\_bubble-top.scss" />
+    <Content Include="default\Hover-master\scss\hover.scss" />
+    <Content Include="default\Hover-master\scss\_hacks.scss" />
+    <Content Include="default\Hover-master\scss\_mixins.scss" />
+    <Content Include="default\Hover-master\scss\_options.scss" />
+    <Content Include="fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="fonts\glyphicons-halflings-regular.woff2" />
+    <Content Include="img\drinks\Thumbs.db" />
+    <Content Include="img\Thumbs.db" />
+    <Content Include="npm-debug.log" />
+    <Content Include="packages.config" />
+    <Content Include="Scripts\jquery-1.9.1.min.map" />
+    <Content Include="Scripts\jquery-ui-1.11.4.custom.zip" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Content\bootstrap-theme.css" />
+    <Content Include="Content\bootstrap-theme.min.css" />
+    <Content Include="Content\bootstrap.css" />
+    <Content Include="Content\bootstrap.min.css" />
+    <Content Include="default\default.css" />
+    <Content Include="default\Hover-master\.gitignore" />
+    <Content Include="default\Hover-master\css\demo-page.css" />
+    <Content Include="default\Hover-master\css\hover-min.css" />
+    <Content Include="default\Hover-master\css\hover.css" />
+    <Content Include="default\Hover-master\eager.jpg" />
+    <Content Include="default\Hover-master\Gruntfile.js" />
+    <Content Include="default\Hover-master\hover.jpg" />
+    <Content Include="default\Hover-master\index.html" />
+    <Content Include="default\Hover-master\license.txt" />
+    <Content Include="default\Hover-master\logo-transparent.png" />
+    <Content Include="fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="img\background.png" />
+    <Content Include="img\border1.png" />
+    <Content Include="img\door1.png" />
+    <Content Include="img\drinks\Apfelsaftschorle.jpg" />
+    <Content Include="img\drinks\Bier.jpg" />
+    <Content Include="img\drinks\Cappuccino.jpg" />
+    <Content Include="img\drinks\Cola.jpg" />
+    <Content Include="img\drinks\ColaLight.jpg" />
+    <Content Include="img\drinks\ColaZero.jpg" />
+    <Content Include="img\drinks\fanta.png" />
+    <Content Include="img\drinks\kaffeSchwarz.JPG" />
+    <Content Include="img\drinks\lattemacchiato.png" />
+    <Content Include="img\drinks\longDrink.jpg" />
+    <Content Include="img\drinks\Sprite.jpg" />
+    <Content Include="img\panorama.jpg" />
+    <Content Include="img\Sammo1.jpg" />
+    <Content Include="img\Sammo2.jpg" />
+    <Content Include="pages\scores\scores.css" />
+    <Content Include="pages\scores\scores.html" />
+    <Content Include="pages\scores\scores.js" />
+    <Content Include="pages\settings\settings.css" />
+    <Content Include="pages\settings\settings.html" />
+    <Content Include="pages\settings\settings.js" />
+    <Content Include="pages\start\Start.css" />
+    <Content Include="pages\start\start.html" />
+    <Content Include="pages\start\start.js" />
+    <Content Include="pages\story\Games\SammoGame\sammo.css" />
+    <Content Include="pages\story\Games\SammoGame\sammo.html" />
+    <Content Include="pages\story\Games\SammoGame\sammo.js" />
+    <Content Include="pages\story\Games\WoodstöcklGame\ws.css" />
+    <Content Include="pages\story\Games\WoodstöcklGame\ws.html" />
+    <Content Include="pages\story\Games\WoodstöcklGame\ws.js" />
+    <Content Include="pages\story\story.css" />
+    <Content Include="pages\story\story.html" />
+    <Content Include="pages\story\story.js" />
+    <Content Include="Scripts\bootstrap.js" />
+    <Content Include="Scripts\bootstrap.min.js" />
+    <None Include="Scripts\jquery-1.9.1.intellisense.js" />
+    <Content Include="Scripts\jquery-1.9.1.js" />
+    <Content Include="Scripts\jquery-1.9.1.min.js" />
+    <Content Include="Scripts\jquery-ui.min.css" />
+    <Content Include="Scripts\jquery-ui.min.js" />
+    <Content Include="Scripts\npm.js" />
+    <Content Include="Web.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>11062</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:11062/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

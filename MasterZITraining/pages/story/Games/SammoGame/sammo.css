@@ -1,0 +1,65 @@
+﻿.choice {
+    height: 280px;
+    width: 280px;
+    margin: 5px;
+    z-index:2;
+}
+
+    .choice:hover {
+        border: 2px solid blue;
+    }
+
+.randomBox {
+    height: 900px;
+    width: 900px;
+    position: absolute;
+    border: 2px solid white;
+    background: rgba(0,0,0,0.8);
+    z-index: 1;
+}
+
+.img1 {
+    position: absolute;
+}
+
+.img2 {
+    position: absolute;
+}
+
+
+
+body {
+    text-align: center;
+}
+
+.door {
+    margin-left: 459px;
+    margin-top: 162px;
+    position: absolute;
+    z-index: 1;
+    width: 83px;
+    height: 186px;
+    background-color: transparent;
+}
+
+    .door:hover {
+        border: 5px solid green;
+    }
+
+.order {
+    margin-left: 173px;
+    margin-top: 54px;
+    position: absolute;
+    z-index: 1;
+    width: 238px;
+    height: 87px;
+    background-color: rgba(0,0,0,0.6);
+    font-size: 20px;
+    color:white;
+    white-space:normal;
+    text-align:justify;
+}
+
+.order:hover {
+        border: 5px solid green;
+    }
