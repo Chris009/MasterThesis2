@@ -67,18 +67,31 @@ var panoWidth = $('.imgHolder').width();
 var aspectRatio = panoWidth / panoHeight;
 
 function zoomIn(){
-
+    //img
     var imgWidth = $('.imgHolder').width() * 1.1;
     var imgHeight = $('.imgHolder').width() / aspectRatio;
     $('.imgHolder').width(imgWidth);
     $('.imgHolder').height(imgHeight);
+
+    //door1
+    var door1Width = $('.doorNo1').width() * 1.1;
+    var door1Height = $('.doorNo1').height() * 1.1;
+    $('.doorNo1').width(door1Width);
+    $('.doorNo1').height(door1Height);
+    var position = $('.doorNo1').position();
+    position.left = position.left * 1.1;
+    position.top = position.top * 1.1;
 	resize();
 }
 
-function zoomOut(){
+function zoomOut() {
+    //img
     var imgWidth = $('.imgHolder').width() * 0.9;
     var imgHeight = $('.imgHolder').width() / aspectRatio;
     $('.imgHolder').width(imgWidth);
     $('.imgHolder').height(imgHeight);
+
+    //door1
+
 	resize();
 }
