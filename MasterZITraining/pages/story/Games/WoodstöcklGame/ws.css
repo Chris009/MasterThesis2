@@ -2,8 +2,8 @@
     position: absolute;
     height: 733px;
     width: 258px;
-    top: 542Px;
-    left: 1734px;
+    top: 22%;
+    left: 35.5%;
     -moz-transform: matrix(1, 0.02, 0, 1, 0, 0);
     -ms-transform: matrix(1, 0.02, 0, 1, 0, 0);
     -o-transform: matrix(1, 0.02, 0, 1, 0, 0);
@@ -11,20 +11,7 @@
     transform: matrix(1, 0.02, 0, 1, 0, 0);
 }
 
-.doorNo2 {
-    position: absolute;
-    top: 348px;
-    left: 733px;
-    height: 285px;
-    width: 211px;
-    border: 3px solid green;
-    
-    -ms-transform: matrix(1, -0.1, -.03, 1, 0, 0);
-    -webkit-transform: matrix(1, -0.1, -.03, 1, 0, 0);
-    -moz-transform: matrix(1, -0.1, -.03, 1, 0, 0);
-    -o-transform: matrix(1, -0.1, -.03, 1, 0, 0);
-    transform: matrix(1, -0.1, -.03, 1, 0, 0);
-}
+
 
 
 
@@ -37,6 +24,7 @@
     background-size:   cover;                   
     background-repeat: no-repeat;
     background-position: center center;   
+    
 }
 
 .imageCup {

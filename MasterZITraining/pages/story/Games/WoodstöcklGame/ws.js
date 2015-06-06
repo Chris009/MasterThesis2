@@ -42,12 +42,12 @@ $(document).ready(function () {
 });
 
 
-function resize(){
+function resize() {
+    //init
     $("body").addClass("stop-scrolling");
-
     imgPanorama = $('.imgHolder');
     
-
+   
 
 
     var widthContainer = ($(imgPanorama).width() + ($(imgPanorama).width() - $(window).width()));
@@ -60,11 +60,18 @@ function resize(){
     var containerPosLeft = (-widthContainer / 2) + ($(window).width() / 2);
 
     $("#containment").css({ top: containerPosTop, left: containerPosLeft, position: 'absolute' });
+
+    // Placements
+    $('.doorNo1').css({ top: "22%", left: "35.5%" });
+    $(imgPanorama).css({ top: "26%", left: "24%"});
 }
 
 var panoHeight = $('.imgHolder').height();
 var panoWidth = $('.imgHolder').width();
 var aspectRatio = panoWidth / panoHeight;
+
+
+//ZOOM
 
 function zoomIn(){
     //img
@@ -78,9 +85,6 @@ function zoomIn(){
     var door1Height = $('.doorNo1').height() * 1.1;
     $('.doorNo1').width(door1Width);
     $('.doorNo1').height(door1Height);
-    var position = $('.doorNo1').position();
-    position.left = position.left * 1.1;
-    position.top = position.top * 1.1;
 	resize();
 }
 
@@ -91,7 +95,13 @@ function zoomOut() {
     $('.imgHolder').width(imgWidth);
     $('.imgHolder').height(imgHeight);
 
+
+
     //door1
+    var door1Width = $('.doorNo1').width() * 0.9;
+    var door1Height = $('.doorNo1').height() * 0.9;
+    $('.doorNo1').width(door1Width);
+    $('.doorNo1').height(door1Height);
 
 	resize();
 }
