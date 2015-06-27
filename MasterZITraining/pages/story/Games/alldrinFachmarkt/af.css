@@ -1,0 +1,185 @@
+﻿.doorNo1 {
+    position: absolute;
+  height: 428px;
+  width: 347px;
+    top: 59%;
+  left: 37.5%;
+  -moz-transform: matrix(1, 0.02, 0, 1, 0, 0);
+  -ms-transform: matrix(1, 0.02, 0, 1, 0, 0);
+  -o-transform: matrix(1, 0.02, 0, 1, 0, 0);
+  -webkit-transform: matrix(1, 0.02, 0, 1, 0, 0);
+  transform: matrix(1, -0.01, 0, 1, 0, 0);
+}
+
+.doorNo21 {
+    visibility: hidden;
+    position: absolute;
+    height: 224px;
+    width: 245px;
+    top: 37%;
+    left: 13.2%;
+    -moz-transform: matrix(1, 0.01, 0, 1, 0, 0);
+    -ms-transform: matrix(1, 0.01, 0, 1, 0, 0);
+    -o-transform: matrix(1, 0.01, 0, 1, 0, 0);
+    -webkit-transform: matrix(1, 0.01, 0, 1, 0, 0);
+    transform: matrix(1, 0.01, 0, 1, 0, 0);
+}
+
+.doorNo22 {
+    visibility: hidden;
+    position: absolute;
+    height: 247px;
+    width: 248px;
+    top: 32.3%;
+    left: 75%;
+    -moz-transform: matrix(1, -0.03, 0, 1, 0, 0);
+    -ms-transform: matrix(1, -0.03, 0, 1, 0, 0);
+    -o-transform: matrix(1, -0.03, 0, 1, 0, 0);
+    -webkit-transform: matrix(1, -0.03, 0, 1, 0, 0);
+    transform: matrix(1, -0.03, 0, 1, 0, 0);
+}
+
+.doorNo31 {
+    visibility: hidden;
+    position: absolute;
+    height: 224px;
+    width: 245px;
+    top: 37%;
+    left: 13.2%;
+    -moz-transform: matrix(1, 0.01, 0, 1, 0, 0);
+    -ms-transform: matrix(1, 0.01, 0, 1, 0, 0);
+    -o-transform: matrix(1, 0.01, 0, 1, 0, 0);
+    -webkit-transform: matrix(1, 0.01, 0, 1, 0, 0);
+    transform: matrix(1, 0.01, 0, 1, 0, 0);
+}
+
+.doorNo32 {
+    visibility: hidden;
+    position: absolute;
+    height: 247px;
+    width: 248px;
+    top: 32.3%;
+    left: 75%;
+    -moz-transform: matrix(1, -0.03, 0, 1, 0, 0);
+    -ms-transform: matrix(1, -0.03, 0, 1, 0, 0);
+    -o-transform: matrix(1, -0.03, 0, 1, 0, 0);
+    -webkit-transform: matrix(1, -0.03, 0, 1, 0, 0);
+    transform: matrix(1, -0.03, 0, 1, 0, 0);
+}
+
+.doorNo41 {
+    visibility: hidden;
+    position: absolute;
+    height: 224px;
+    width: 245px;
+    top: 37%;
+    left: 13.2%;
+    -moz-transform: matrix(1, 0.01, 0, 1, 0, 0);
+    -ms-transform: matrix(1, 0.01, 0, 1, 0, 0);
+    -o-transform: matrix(1, 0.01, 0, 1, 0, 0);
+    -webkit-transform: matrix(1, 0.01, 0, 1, 0, 0);
+    transform: matrix(1, 0.01, 0, 1, 0, 0);
+}
+
+.doorNo42 {
+    visibility: hidden;
+    position: absolute;
+    height: 247px;
+    width: 248px;
+    top: 32.3%;
+    left: 75%;
+    -moz-transform: matrix(1, -0.03, 0, 1, 0, 0);
+    -ms-transform: matrix(1, -0.03, 0, 1, 0, 0);
+    -o-transform: matrix(1, -0.03, 0, 1, 0, 0);
+    -webkit-transform: matrix(1, -0.03, 0, 1, 0, 0);
+    transform: matrix(1, -0.03, 0, 1, 0, 0);
+}
+
+
+
+
+.imgHolder {
+    position: absolute;
+    background-image:url(../../../../img/GetraenkeMarkt/outside.jpg);
+    background-size:   cover;                   
+    background-repeat: no-repeat;
+    background-position: center center;   
+    
+}
+
+#imageSizer {
+    height: 1400px;
+    width: auto;
+}
+
+.stop-scrolling {
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+    position: fixed;
+}
+
+#containment {
+    position: absolute;
+    background-color: aqua;
+}
+
+.choice {
+    height: 280px;
+    width: 280px;
+    margin: 5px;
+    z-index: 2;
+}
+
+    .choice:hover {
+        border: 2px solid blue;
+    }
+
+.randomBox {
+    height: 900px;
+    width: 900px;
+    position: absolute;
+    border: 2px solid white;
+    background: rgba(0,0,0,0.8);
+    z-index: 1;
+}
+
+
+
+
+
+body {
+    text-align: center;
+}
+
+.door {
+    margin-left: 459px;
+    margin-top: 162px;
+    position: absolute;
+    z-index: 1;
+    width: 83px;
+    height: 186px;
+    background-color: transparent;
+}
+
+    .door:hover {
+        border: 5px solid green;
+    }
+
+.order {
+    margin-left: 173px;
+    margin-top: 54px;
+    position: absolute;
+    z-index: 1;
+    width: 238px;
+    height: 87px;
+    background-color: rgba(0,0,0,0.6);
+    font-size: 20px;
+    color: white;
+    white-space: normal;
+    text-align: justify;
+}
+
+    .order:hover {
+        border: 5px solid green;
+    }

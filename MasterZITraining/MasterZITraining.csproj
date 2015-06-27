@@ -297,11 +297,33 @@
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />
     <Content Include="img\drinks\Thumbs.db" />
+    <Content Include="img\GetraenkeMarkt\inside2.jpg" />
+    <Content Include="img\GetraenkeMarkt\inside3.jpg" />
+    <Content Include="img\GetraenkeMarkt\inside4.jpg" />
+    <Content Include="img\GetraenkeMarkt\outside.jpg" />
+    <Content Include="img\GetraenkeMarkt\piece1.jpg" />
+    <Content Include="img\GetraenkeMarkt\piece2.jpg" />
+    <Content Include="img\GetraenkeMarkt\piece3.jpg" />
+    <Content Include="img\GetraenkeMarkt\piece4.jpg" />
+    <Content Include="img\GetraenkeMarkt\piece5.jpg" />
+    <Content Include="img\GetraenkeMarkt\shelf.jpg" />
+    <Content Include="img\pos0_neu.jpg" />
     <Content Include="img\Thumbs.db" />
     <Content Include="npm-debug.log" />
     <Content Include="packages.config" />
+    <Content Include="pages\story\Games\Spreisel\img\SpreiselBar.jpg" />
+    <Content Include="pages\story\Games\Spreisel\img\SpreiselEingang.jpg" />
+    <Content Include="pages\story\Games\Spreisel\img\SpreiselKarte.jpg" />
+    <Content Include="pages\story\Games\Spreisel\img\SpreiselTisch.jpg" />
+    <Content Include="pages\story\Games\Spreisel\spreisel.css" />
+    <Content Include="pages\story\Games\Spreisel\spreisel.html" />
+    <Content Include="pages\story\Games\Spreisel\spreisel.js" />
+    <Content Include="pages\story\Games\alldrinFachmarkt\af.css" />
+    <Content Include="pages\story\Games\alldrinFachmarkt\af.html" />
+    <Content Include="pages\story\Games\alldrinFachmarkt\af.js" />
     <Content Include="Scripts\jquery-1.9.1.min.map" />
     <Content Include="Scripts\jquery-ui-1.11.4.custom.zip" />
+    <Content Include="img\pos3.svgz" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -374,6 +396,7 @@
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
+  <ItemGroup />
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>

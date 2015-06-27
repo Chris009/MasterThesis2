@@ -1,0 +1,52 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <script src="../../../../Scripts/jquery-1.9.1.min.js"></script>
+    <script src="../../../../Scripts/jquery-ui.min.js"></script>
+    <link href="../../../../Content/bootstrap.min.css" rel="stylesheet" />
+    <link href="../../../../default/default.css" rel="stylesheet" />
+
+    <link href="spreisel.css" rel="stylesheet" />
+
+    <link href="../../../../default/Hover-master/css/hover.css" rel="stylesheet" />
+    <title></title>
+</head>
+<body>
+
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" onclick="backNav()" class="navbutton" aria-label="Left Align">
+                    <span class="navicon glyphicon glyphicon-arrow-left" aria-hidden="true"></span>
+                </button>
+                <button type="button" onclick="homeNav()" class="navbutton" aria-label="Left Align">
+                    <span class="navicon glyphicon glyphicon-home" aria-hidden="true"></span>
+                </button>
+                <button type="button" onclick="zoomIn()" class="navbutton" aria-label="Left Align">
+                    <span class="navicon glyphicon glyphicon-plus" aria-hidden="true"></span>
+                </button>
+                <button type="button" onclick="zoomOut()" class="navbutton" aria-label="Left Align">
+                    <span class="navicon glyphicon glyphicon-minus" aria-hidden="true"></span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <div class="imgHolder" id="makeMeDraggable">
+        <div class="doorNo1 hvr-reveal" onclick="doorToBar()"></div>
+        <div class="doorNo2" onclick="doorToTable()">Einen schönen guten Tag, nehmen sie bitte Platz!</div>
+        <div class="doorNo3" onclick="doorToMenu()"></div>
+        <div class="menueGame" onclick="startGame()"></div>
+        <div class="randomBox hidden"></div>
+    </div>
+
+
+
+
+    <script src="spreisel.js"></script>
+    <script src="../../../../Scripts/bootstrap.min.js"></script>
+</body>
+</html>
+
+

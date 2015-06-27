@@ -24,6 +24,12 @@ function wsNav() {
 
 }
 
+function spreiselNav() {
+
+    window.location.replace('Games/Spreisel/spreisel.html');
+
+}
+
 
 
 function getMap() {
@@ -64,12 +70,20 @@ function getMap() {
         width: null, height: null,
         htmlContent: "<div class='pushpin'>Woodstöckl</div>"
     };
+    //Spreisel
+    var locationSpreisel = new Microsoft.Maps.Location(49.4994436, 8.4734803);
+    var spreiselPinOptions = {
+        width: null, height: null,
+        htmlContent: "<div class='pushpin'>Spreisel (fake)</div>"
+    };
 
     // Add a pin to the cafe location of the map
     //Sammo
     var pinSammo = new Microsoft.Maps.Pushpin(locationSammo, sammoPinOptions); 
     //Woodstöckl
     var pinWs = new Microsoft.Maps.Pushpin(locationWs, wsPinOptions);
+    //Spreisel
+    var pinSpreisel = new Microsoft.Maps.Pushpin(locationSpreisel, spreiselPinOptions);
 
     // Create the infobox for the pushpin
     //Sammo
@@ -87,17 +101,29 @@ function getMap() {
            actions: [{ label: 'GoTo Game', eventHandler: wsNav }],
            visible: false,
        });
+    //Spreisel
+        pinSpreiselInfobox = new Microsoft.Maps.Infobox(pinSpreisel.getLocation(),
+           {
+               title: 'Spreisel',
+               description: 'Infobox description',
+               actions: [{ label: 'GoTo Game', eventHandler: spreiselNav }],
+               visible: false,
+           });
+
     // Add handler for the pushpin click event.
     //Sammo
         Microsoft.Maps.Events.addHandler(pinSammo, 'click', displaySammoInfobox);
     //Woodstöckl
         Microsoft.Maps.Events.addHandler(pinWs, 'click', displayWsInfobox);
-
+    //Spreisel
+        Microsoft.Maps.Events.addHandler(pinSpreisel, 'click', displaySpreiselInfobox);
     // Hide the infobox when the map is moved.
     //Sammo
     Microsoft.Maps.Events.addHandler(map, 'viewchange', hideSammoInfobox);
     //Woodstöckl
     Microsoft.Maps.Events.addHandler(map, 'viewchange', hideWsInfobox);
+    //Spreisel
+    Microsoft.Maps.Events.addHandler(map, 'viewchange', hideSpreiselInfobox);
 
     // Add the pushpins and infobox to the map
     //Sammo
@@ -106,6 +132,10 @@ function getMap() {
     //Woodstöckl
     map.entities.push(pinWs);
     map.entities.push(pinWsInfobox);
+    //Spreisel
+    map.entities.push(pinSpreisel);
+    map.entities.push(pinSpreiselInfobox);
+    
 }
 //Sammo
 function displaySammoInfobox(e)
@@ -117,4 +147,10 @@ function hideSammoInfobox(e)
 function displayWsInfobox(e)
 { pinWsInfobox.setOptions({ visible: true }); }
 function hideWsInfobox(e)
+{ pinWsInfobox.setOptions({ visible: false }); }
+
+//Spreisel
+function displaySpreiselInfobox(e)
+{ pinSpreiselInfobox.setOptions({ visible: true }); }
+function hideSpreiselInfobox(e)
 { pinWsInfobox.setOptions({ visible: false }); }
