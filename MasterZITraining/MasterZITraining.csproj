@@ -311,6 +311,7 @@
     <Content Include="img\Thumbs.db" />
     <Content Include="npm-debug.log" />
     <Content Include="packages.config" />
+    <Content Include="pages\story\Games\alldrinFachmarkt\gameAf.html" />
     <Content Include="pages\story\Games\Spreisel\img\SpreiselBar.jpg" />
     <Content Include="pages\story\Games\Spreisel\img\SpreiselEingang.jpg" />
     <Content Include="pages\story\Games\Spreisel\img\SpreiselKarte.jpg" />

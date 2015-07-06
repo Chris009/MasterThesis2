@@ -12,7 +12,7 @@
     <link href="../../../../default/Hover-master/css/hover.css" rel="stylesheet" />
     <title></title>
 </head>
-<body>
+<body onload="gameBegin()">
 
     <nav class="navbar navbar-inverse navbar-fixed-top">
         <div class="container-fluid">
@@ -32,25 +32,25 @@
             </div>
         </div>
     </nav>
-    <div id="containment">
-        <div class="imgHolder" id="makeMeDraggable" >
-            <div class="doorNo1 hvr-reveal" onclick="outsideIn()"></div>
-            <div class="doorNo21 hvr-reveal" onclick="insideOut()"></div>
-            <div class="doorNo22 hvr-reveal" onclick="insideTwo()"></div>
-            <div class="doorNo31 hvr-reveal" ></div>
-            <div class="doorNo32 hvr-reveal" onclick="insideThree()"></div>
-            <div class="doorNo41 hvr-reveal" ></div>
-            <div class="doorNo42 hvr-reveal" onclick="insideFour()"></div>
-            
+    <label class="timer">0</label>
+    <div class="randombox">
 
-            <img id="imageSizer" src="../../../../img/GetraenkeMarkt/outside.jpg" style="visibility:hidden" />
-            
-            
-           
-        </div>
-    
+
+
+
+        <div class="piece1 hvr-reveal " onclick="check()"></div>
+        <div class="piece2 hvr-reveal " onclick="check()"></div>
+        <div class="piece3 hvr-reveal " onclick="check()"></div>
+        <div class="piece4 hvr-reveal " onclick="check()"></div>
+        <div class="piece5 hvr-reveal " onclick="check()"></div>
+
+        <img class="gameSizer" src="../../../../img/GetraenkeMarkt/shelf.jpg" />
+
+
+
+
     </div>
-    
+
 
     <script src="af.js"></script>
     <script src="../../../../Scripts/bootstrap.min.js"></script>

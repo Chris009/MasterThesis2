@@ -1,14 +1,14 @@
 ﻿.doorNo1 {
     position: absolute;
-  height: 428px;
-  width: 347px;
+    height: 428px;
+    width: 347px;
     top: 59%;
-  left: 37.5%;
-  -moz-transform: matrix(1, 0.02, 0, 1, 0, 0);
-  -ms-transform: matrix(1, 0.02, 0, 1, 0, 0);
-  -o-transform: matrix(1, 0.02, 0, 1, 0, 0);
-  -webkit-transform: matrix(1, 0.02, 0, 1, 0, 0);
-  transform: matrix(1, -0.01, 0, 1, 0, 0);
+    left: 37.5%;
+    -moz-transform: matrix(1, 0.02, 0, 1, 0, 0);
+    -ms-transform: matrix(1, 0.02, 0, 1, 0, 0);
+    -o-transform: matrix(1, 0.02, 0, 1, 0, 0);
+    -webkit-transform: matrix(1, 0.02, 0, 1, 0, 0);
+    transform: matrix(1, -0.01, 0, 1, 0, 0);
 }
 
 .doorNo21 {
@@ -29,9 +29,9 @@
     visibility: hidden;
     position: absolute;
     height: 247px;
-    width: 248px;
+    width: 271px;
     top: 32.3%;
-    left: 75%;
+    left: 71.3%;
     -moz-transform: matrix(1, -0.03, 0, 1, 0, 0);
     -ms-transform: matrix(1, -0.03, 0, 1, 0, 0);
     -o-transform: matrix(1, -0.03, 0, 1, 0, 0);
@@ -56,10 +56,10 @@
 .doorNo32 {
     visibility: hidden;
     position: absolute;
-    height: 247px;
-    width: 248px;
-    top: 32.3%;
-    left: 75%;
+    height: 568px;
+    width: 385px;
+    top: 15.3%;
+    left: 78%;
     -moz-transform: matrix(1, -0.03, 0, 1, 0, 0);
     -ms-transform: matrix(1, -0.03, 0, 1, 0, 0);
     -o-transform: matrix(1, -0.03, 0, 1, 0, 0);
@@ -85,14 +85,14 @@
     visibility: hidden;
     position: absolute;
     height: 247px;
-    width: 248px;
-    top: 32.3%;
-    left: 75%;
-    -moz-transform: matrix(1, -0.03, 0, 1, 0, 0);
-    -ms-transform: matrix(1, -0.03, 0, 1, 0, 0);
-    -o-transform: matrix(1, -0.03, 0, 1, 0, 0);
-    -webkit-transform: matrix(1, -0.03, 0, 1, 0, 0);
-    transform: matrix(1, -0.03, 0, 1, 0, 0);
+    width: 120px;
+    top: 29.8%;
+    left: 86%;
+    -moz-transform: matrix(1, -0.01, 0, 1, 0, 0);
+    -ms-transform: matrix(1, -0.01, 0, 1, 0, 0);
+    -o-transform: matrix(1, -0.01, 0, 1, 0, 0);
+    -webkit-transform: matrix(1, -0.01, 0, 1, 0, 0);
+    transform: matrix(1, -0.01, 0, 1, 0, 0);
 }
 
 
@@ -100,11 +100,10 @@
 
 .imgHolder {
     position: absolute;
-    background-image:url(../../../../img/GetraenkeMarkt/outside.jpg);
-    background-size:   cover;                   
+    background-image: url(../../../../img/GetraenkeMarkt/outside.jpg);
+    background-size: cover;
     background-repeat: no-repeat;
-    background-position: center center;   
-    
+    background-position: center center;
 }
 
 #imageSizer {
@@ -135,16 +134,18 @@
         border: 2px solid blue;
     }
 
-.randomBox {
-    height: 900px;
-    width: 900px;
-    position: absolute;
-    border: 2px solid white;
-    background: rgba(0,0,0,0.8);
+.randombox {
     z-index: 1;
 }
 
-
+.gameSizer {
+    position: absolute;
+    top: 6%;
+    left: 0;
+    width: 100%;
+    height: 95%;
+    z-index: 0;
+}
 
 
 
@@ -183,3 +184,77 @@ body {
     .order:hover {
         border: 5px solid green;
     }
+
+.timer {
+    z-index: 1;
+    font-size: 18px;
+    text-align: center;
+    top: 0;
+    right: 30px;
+    width: 50px;
+    height: 20px;
+    border: 5px solid grey;
+    border-radius: 2px;
+    background-color: rgba(0,0,0,0.6);
+}
+
+
+.piece1 {
+    width: 195px;
+    height: 219px;
+    position: absolute;
+    top: 40.5%;
+    left: 33.8%;
+    z-index: 1;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+.piece2 {
+    width: 192px;
+    height: 219px;
+    position: absolute;
+    top: 40.5%;
+    left: 44%;
+    z-index: 1;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+.piece3 {
+    width: 197px;
+    height: 216px;
+    position: absolute;
+    top: 7.9%;
+    left: 56%;
+    z-index: 1;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+.piece4 {
+    width: 201px;
+    height: 217px;
+    position: absolute;
+    top: 7.9%;
+    left: 66.5%;
+    z-index: 1;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+.piece5 {
+    width: 190px;
+    height: 219px;
+    position: absolute;
+    top: 40.5%;
+    left: 23.9%;
+    z-index: 1;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+}

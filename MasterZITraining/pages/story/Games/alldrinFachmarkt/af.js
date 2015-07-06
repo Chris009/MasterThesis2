@@ -1,16 +1,15 @@
 ﻿
 
+
 var choices = [
-    { title: "Cappucino", alk: false, url: "./../../../../img/drinks/Cappuccino.jpg" },
-    { title: "Kaffee", alk: false, url: "./../../../../img/drinks/kaffeSchwarz.JPG" },
-    { title: "Long Drink", alk: false, url: "./../../../../img/drinks/longDrink.jpg" },
-    { title: "Latte Macchiato", alk: false, url: "./../../../../img/drinks/lattemacchiato.png" },
-    { title: "Bier", alk: true, url: "./../../../../img/drinks/Bier.jpg" },
-    { title: "Cola", alk: false, url: "./../../../../img/drinks/Cola.jpg" },
-    { title: "Fanta", alk: false, url: "./../../../../img/drinks/fanta.png" },
-    { title: "Sprite", alk: false, url: "./../../../../img/drinks/Sprite.jpg" },
-    { title: "Apfelsaftschorle", alk: false, url: "./../../../../img/drinks/Apfelsaftschorle.jpg" }
+    { title: "Bier1", alk: false, url: "./../../../../img/GetraenkeMarkt/piece1.jpg" },
+    { title: "Bier2", alk: false, url: "./../../../../img/GetraenkeMarkt/piece2.jpg" },
+    { title: "Bier3", alk: true, url: "./../../../../img/GetraenkeMarkt/piece3.jpg" },
+    { title: "Bier4", alk: false, url: "./../../../../img/GetraenkeMarkt/piece4.jpg" },
+    { title: "Bier5", alk: true, url: "./../../../../img/GetraenkeMarkt/piece5.jpg" },
 ];
+
+
 
 function backNav() {
 
@@ -120,6 +119,7 @@ function insideThree() {
     $(".doorNo32").css("visibility", "hidden");
     $(".doorNo41").css("visibility", "visible");
     $(".doorNo42").css("visibility", "visible");
+    resize();
 }
 
 function insideBackThree() {
@@ -129,15 +129,124 @@ function insideBackThree() {
     $(".doorNo32").css("visibility", "visible");
     $(".doorNo41").css("visibility", "hidden");
     $(".doorNo42").css("visibility", "hidden");
+    resize();
 }
+
+
 
 function insideFour() {
     $(".imgHolder").css("background-image", "url(../../../../img/GetraenkeMarkt/shelf.jpg)");
-    $("#imageSizer").attr("src", "../../../../img/GetraenkeMarkt/shelf.jpg")
+    $("#imageSizer").attr("src", "../../../../img/GetraenkeMarkt/shelf.jpg");
+    $("#imageSizer").width($(window).width());
+    $("#imageSizer").height($(window).height());
     $(".doorNo41").css("visibility", "hidden");
     $(".doorNo42").css("visibility", "hidden");
     
+    gameStart();
+    
 }
+
+function gameStart() {
+    
+    window.location.replace('gameAf.html');
+  
+}
+
+function gameBegin() {
+    for (var i = choices.length; i >= 1; i--) {
+        var choice = choices[Math.floor(Math.random() * choices.length)];
+
+        choices.splice($.inArray(choice, choices), 1);
+
+        var URL = choice.url;
+        var attribute = choice.alk;
+        var piece = $(".piece" + i);
+        $(piece).attr("value", attribute);
+        $(piece).css("background-image", "url(" + URL + ")");
+
+        
+    }
+}
+
+var checksum = 0;
+var points = 50;
+
+function check() {
+    checksum++;
+    var sender = $(window.event.target);
+    var attribute = $(sender).attr("value");
+    
+
+    if (checksum <= 1) {
+        
+        if (attribute == "true") {
+            $(sender).css("border", "2px solid rgb(25, 255, 25)");
+            points += 50;
+        } else {
+            $(sender).css("border", "2px solid red");
+            points -= 25;
+        }
+    }else {
+        congrats();
+    }
+    
+    
+    clearTimeout(counter);
+
+}
+
+var score;
+
+function congrats() {
+    score = points - count;
+    if (score <= 0) {
+        score = 0;
+    }
+    var r = confirm("Das war schon sehr gut! Du hast "+ count +" sekunden gebraucht und dabei "+ score +" Punkte erreicht. Drücke OK wenn du es nocheinmal probieren möchtest oder Cancel wenn du die Nächste Runde spielen möchtest.");
+    if (r == true) {
+        nextRound();
+    } else {
+        retry();
+    }
+}
+
+function retry() {
+    gameBegin();
+}
+
+var round = 0;
+var roundOnePoints;
+var roundTwoPoints;
+var roundThreePoints;
+var roundOneTime;
+var roundTwoTime;
+var roundThreeTime;
+
+function nextRound() {
+    round++;
+    if (round = 1) {
+        roundOnePoints = score;
+        roundOneTime = count;
+    } else if (round = 2) {
+        roundTwoPoints = score;
+        roundTwoTime = count;
+    } else if (round = 3) {
+        roundThreePoints = score;
+        roundThreeTime = count;
+    }
+   
+}
+
+var count = 0;
+var counter = setInterval(timerStart, 1000);
+
+function timerStart() {
+    
+    count++;
+    $(".timer").text(count);
+}
+
+
 
 //ZOOM
 
