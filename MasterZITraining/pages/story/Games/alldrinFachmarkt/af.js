@@ -153,6 +153,8 @@ function gameStart() {
 }
 
 function gameBegin() {
+    points = 50;
+    count = 0;
     for (var i = choices.length; i >= 1; i--) {
         var choice = choices[Math.floor(Math.random() * choices.length)];
 
@@ -227,15 +229,26 @@ function nextRound() {
     if (round = 1) {
         roundOnePoints = score;
         roundOneTime = count;
+        for (var i = choices.length; i >= 1; i--) {
+            $(".piece" + i).css("border", "none");
+        }
     } else if (round = 2) {
         roundTwoPoints = score;
         roundTwoTime = count;
+        for (var i = choices.length; i >= 1; i--) {
+            $(".piece" + i).css("border", "none");
+        }
     } else if (round = 3) {
         roundThreePoints = score;
         roundThreeTime = count;
+        for (var i = choices.length; i >= 1; i--) {
+            $(".piece" + i).css("border", "none");}
+        endGameProtocol();
     }
    
 }
+
+
 
 var count = 0;
 var counter = setInterval(timerStart, 1000);
@@ -248,6 +261,15 @@ function timerStart() {
 
 
 
+
+
+function endGameProtocol() {
+    var endScore = roundOnePoints + roundTwoPoints + roundThreePoints;
+    var endTime = roundOneTime + roundTwoTime + roundThreeTime;
+    $(".randombox").css("visibility", "hidden");
+    var e = '<p class="endScreen">Herzlichen Glückwunsch! Du hast '+ endScore +' Punkte in insgesamt '+ endTime +' Sekunden erreicht!</p>';
+    $("body").append(e);
+}
 //ZOOM
 
 //function zoomIn(){

@@ -258,3 +258,7 @@ body {
     background-repeat: no-repeat;
     background-position: center center;
 }
+
+.endScreen {
+    font-size: 25px;
+}

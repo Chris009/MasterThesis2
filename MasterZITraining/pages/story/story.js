@@ -30,6 +30,12 @@ function spreiselNav() {
 
 }
 
+function AFNav() {
+
+    window.location.replace('Games/alldrinFachmarkt/af.html');
+
+}
+
 
 
 function getMap() {
@@ -77,6 +83,13 @@ function getMap() {
         htmlContent: "<div class='pushpin'>Spreisel (fake)</div>"
     };
 
+    //AlldrinkGetränkefachmarkt
+    var locationAF = new Microsoft.Maps.Location(49.5278520, 8.4904560);
+    var AFPinOptions = {
+        width: null, height: null,
+        htmlContent: "<div class='pushpin'>AllDrink Getränkefachmarkt</div>"
+    };
+
     // Add a pin to the cafe location of the map
     //Sammo
     var pinSammo = new Microsoft.Maps.Pushpin(locationSammo, sammoPinOptions); 
@@ -84,6 +97,8 @@ function getMap() {
     var pinWs = new Microsoft.Maps.Pushpin(locationWs, wsPinOptions);
     //Spreisel
     var pinSpreisel = new Microsoft.Maps.Pushpin(locationSpreisel, spreiselPinOptions);
+    //Alldrink
+    var pinAF = new Microsoft.Maps.Pushpin(locationAF, AFPinOptions);
 
     // Create the infobox for the pushpin
     //Sammo
@@ -109,6 +124,14 @@ function getMap() {
                actions: [{ label: 'GoTo Game', eventHandler: spreiselNav }],
                visible: false,
            });
+    //AllDrink
+        pinAFInfobox = new Microsoft.Maps.Infobox(pinAF.getLocation(),
+           {
+               title: 'Alldrink Getränke',
+               description: 'Infobox description',
+               actions: [{ label: 'GoTo Game', eventHandler: AFNav }],
+               visible: false,
+           });
 
     // Add handler for the pushpin click event.
     //Sammo
@@ -117,6 +140,9 @@ function getMap() {
         Microsoft.Maps.Events.addHandler(pinWs, 'click', displayWsInfobox);
     //Spreisel
         Microsoft.Maps.Events.addHandler(pinSpreisel, 'click', displaySpreiselInfobox);
+    //AF
+        Microsoft.Maps.Events.addHandler(pinAF, 'click', displayAFInfobox);
+
     // Hide the infobox when the map is moved.
     //Sammo
     Microsoft.Maps.Events.addHandler(map, 'viewchange', hideSammoInfobox);
@@ -124,6 +150,8 @@ function getMap() {
     Microsoft.Maps.Events.addHandler(map, 'viewchange', hideWsInfobox);
     //Spreisel
     Microsoft.Maps.Events.addHandler(map, 'viewchange', hideSpreiselInfobox);
+    //AF
+    Microsoft.Maps.Events.addHandler(map, 'viewchange', hideAFInfobox);
 
     // Add the pushpins and infobox to the map
     //Sammo
@@ -135,6 +163,9 @@ function getMap() {
     //Spreisel
     map.entities.push(pinSpreisel);
     map.entities.push(pinSpreiselInfobox);
+    //AF
+    map.entities.push(pinAF);
+    map.entities.push(pinAFInfobox);
     
 }
 //Sammo
@@ -153,4 +184,10 @@ function hideWsInfobox(e)
 function displaySpreiselInfobox(e)
 { pinSpreiselInfobox.setOptions({ visible: true }); }
 function hideSpreiselInfobox(e)
-{ pinWsInfobox.setOptions({ visible: false }); }
+{ pinSpreiselInfobox.setOptions({ visible: false }); }
+
+//AF
+function displayAFInfobox(e)
+{ pinAFInfobox.setOptions({ visible: true }); }
+function hideAFInfobox(e)
+{ pinAFInfobox.setOptions({ visible: false }); }
