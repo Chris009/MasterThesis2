@@ -1,68 +1,85 @@
 ﻿
 
 
-var choices = [
-    { title: "Bier1", alk: false, url: "./../../../../img/GetraenkeMarkt/piece1.jpg" },
-    { title: "Bier2", alk: false, url: "./../../../../img/GetraenkeMarkt/piece2.jpg" },
-    { title: "Bier3", alk: true, url: "./../../../../img/GetraenkeMarkt/piece3.jpg" },
-    { title: "Bier4", alk: false, url: "./../../../../img/GetraenkeMarkt/piece4.jpg" },
-    { title: "Bier5", alk: true, url: "./../../../../img/GetraenkeMarkt/piece5.jpg" },
-];
+var choices = [{
+  title: "Bier1",
+  alk: false,
+  url: "./../../../../img/GetraenkeMarkt/piece1.jpg"
+}, {
+  title: "Bier2",
+  alk: false,
+  url: "./../../../../img/GetraenkeMarkt/piece2.jpg"
+}, {
+  title: "Bier3",
+  alk: true,
+  url: "./../../../../img/GetraenkeMarkt/piece3.jpg"
+}, {
+  title: "Bier4",
+  alk: false,
+  url: "./../../../../img/GetraenkeMarkt/piece4.jpg"
+}, {
+  title: "Bier5",
+  alk: true,
+  url: "./../../../../img/GetraenkeMarkt/piece5.jpg"
+}, ];
 
 
 
 function backNav() {
 
-    window.location.replace('../../story.html');
+  window.location.replace('../../story.html');
 
 }
 
 function homeNav() {
 
-    window.location.replace('../../../start/start.html');
+  window.location.replace('../../../start/start.html');
 
 }
 
 
 var imgPanorama;
 var divXstart, divYstart, backgroundX, backgroundY;
-$(document).ready(function () {
-
- 
-   	resize();
+$(document).ready(function() {
 
 
-    $('#makeMeDraggable').draggable({
-        containment: '#containment',
-        cursor: 'move'
-    });
+  resize();
 
-   
+
+  $('#makeMeDraggable').draggable({
+    containment: '#containment',
+    cursor: 'move'
+  });
+
+
 });
 
 
-function resize() {
-    //init
-    $("body").addClass("stop-scrolling");
-    imgPanorama = $('#imageSizer');
-    
-   
+function resize() { //init
+  $("body").addClass("stop-scrolling");
+  imgPanorama = $('#imageSizer');
 
 
-    var widthContainer = ($(imgPanorama).width() + ($(imgPanorama).width() - $(window).width()));
-    var heightContainer = ($(imgPanorama).height() + ($(imgPanorama).height() - $(window).height()));
 
-    $("#containment").width(widthContainer);
-    $("#containment").height(heightContainer);
 
-    var containerPosTop = (-heightContainer / 2) + ($(window).height() / 2);
-    var containerPosLeft = (-widthContainer / 2) + ($(window).width() / 2);
+  var widthContainer = ($(imgPanorama).width() + ($(imgPanorama).width() - $(window).width()));
+  var heightContainer = ($(imgPanorama).height() + ($(imgPanorama).height() - $(window).height()));
 
-    $("#containment").css({ top: containerPosTop, left: containerPosLeft, position: 'absolute' });
+  $("#containment").width(widthContainer);
+  $("#containment").height(heightContainer);
 
-    // Placements
-    
-    
+  var containerPosTop = (-heightContainer / 2) + ($(window).height() / 2);
+  var containerPosLeft = (-widthContainer / 2) + ($(window).width() / 2);
+
+  $("#containment").css({
+    top: containerPosTop,
+    left: containerPosLeft,
+    position: 'absolute'
+  });
+
+  // Placements
+
+
 }
 
 var panoHeight = $('.imgHolder').height();
@@ -72,148 +89,148 @@ var aspectRatio = panoWidth / panoHeight;
 
 
 function outsideIn() {
-    $(".imgHolder").css("background-image", "url(../../../../img/GetraenkeMarkt/inside2.jpg)");
-    $("#imageSizer").attr("src", "../../../../img/GetraenkeMarkt/inside2.jpg")
-    $(".doorNo1").css("visibility", "hidden");
-    $(".doorNo21").css("visibility", "visible");
-    $(".doorNo21").addClass("hvr-reveal");
-    $(".doorNo22").css("visibility", "visible");
-    $(".doorNo22").addClass("hvr-reveal");
-    resize();
+  $(".imgHolder").css("background-image", "url(../../../../img/GetraenkeMarkt/inside2.jpg)");
+  $("#imageSizer").attr("src", "../../../../img/GetraenkeMarkt/inside2.jpg")
+  $(".doorNo1").css("visibility", "hidden");
+  $(".doorNo21").css("visibility", "visible");
+  $(".doorNo21").addClass("hvr-reveal");
+  $(".doorNo22").css("visibility", "visible");
+  $(".doorNo22").addClass("hvr-reveal");
+  resize();
 }
 
 function insideOut() {
-    $(".imgHolder").css("background-image", "url(../../../../img/GetraenkeMarkt/outside.jpg)");
-    $("#imageSizer").attr("src", "../../../../img/GetraenkeMarkt/outside.jpg")
-    $(".doorNo1").css("visibility", "visible");
-    $(".doorNo21").css("visibility", "hidden");
-    $(".doorNo22").css("visibility", "hidden");
-    resize();
+  $(".imgHolder").css("background-image", "url(../../../../img/GetraenkeMarkt/outside.jpg)");
+  $("#imageSizer").attr("src", "../../../../img/GetraenkeMarkt/outside.jpg")
+  $(".doorNo1").css("visibility", "visible");
+  $(".doorNo21").css("visibility", "hidden");
+  $(".doorNo22").css("visibility", "hidden");
+  resize();
 }
 
 function insideTwo() {
-    $(".imgHolder").css("background-image", "url(../../../../img/GetraenkeMarkt/inside3.jpg)");
-    $("#imageSizer").attr("src", "../../../../img/GetraenkeMarkt/inside3.jpg") 
-    $(".doorNo21").css("visibility", "hidden");  
-    $(".doorNo22").css("visibility", "hidden");
-    $(".doorNo31").css("visibility", "visible");
-    $(".doorNo32").css("visibility", "visible");
-    resize();
-    
+  $(".imgHolder").css("background-image", "url(../../../../img/GetraenkeMarkt/inside3.jpg)");
+  $("#imageSizer").attr("src", "../../../../img/GetraenkeMarkt/inside3.jpg")
+  $(".doorNo21").css("visibility", "hidden");
+  $(".doorNo22").css("visibility", "hidden");
+  $(".doorNo31").css("visibility", "visible");
+  $(".doorNo32").css("visibility", "visible");
+  resize();
+
 }
 
 function insideBackTwo() {
-    $(".imgHolder").css("background-image", "url(../../../../img/GetraenkeMarkt/inside2.jpg)");
-    $("#imageSizer").attr("src", "../../../../img/GetraenkeMarkt/inside2.jpg")
-    $(".doorNo21").css("visibility", "visible");
-    $(".doorNo22").css("visibility", "visible");
-    $(".doorNo31").css("visibility", "hidden");
-    $(".doorNo32").css("visibility", "hidden");
-    resize();
+  $(".imgHolder").css("background-image", "url(../../../../img/GetraenkeMarkt/inside2.jpg)");
+  $("#imageSizer").attr("src", "../../../../img/GetraenkeMarkt/inside2.jpg")
+  $(".doorNo21").css("visibility", "visible");
+  $(".doorNo22").css("visibility", "visible");
+  $(".doorNo31").css("visibility", "hidden");
+  $(".doorNo32").css("visibility", "hidden");
+  resize();
 }
 
 function insideThree() {
-    $(".imgHolder").css("background-image", "url(../../../../img/GetraenkeMarkt/inside4.jpg)");
-    $("#imageSizer").attr("src", "../../../../img/GetraenkeMarkt/inside4.jpg")
-    $(".doorNo31").css("visibility", "hidden");
-    $(".doorNo32").css("visibility", "hidden");
-    $(".doorNo41").css("visibility", "visible");
-    $(".doorNo42").css("visibility", "visible");
-    resize();
+  $(".imgHolder").css("background-image", "url(../../../../img/GetraenkeMarkt/inside4.jpg)");
+  $("#imageSizer").attr("src", "../../../../img/GetraenkeMarkt/inside4.jpg")
+  $(".doorNo31").css("visibility", "hidden");
+  $(".doorNo32").css("visibility", "hidden");
+  $(".doorNo41").css("visibility", "visible");
+  $(".doorNo42").css("visibility", "visible");
+  resize();
 }
 
 function insideBackThree() {
-    $(".imgHolder").css("background-image", "url(../../../../img/GetraenkeMarkt/inside3.jpg)");
-    $("#imageSizer").attr("src", "../../../../img/GetraenkeMarkt/inside3.jpg")
-    $(".doorNo31").css("visibility", "visible");
-    $(".doorNo32").css("visibility", "visible");
-    $(".doorNo41").css("visibility", "hidden");
-    $(".doorNo42").css("visibility", "hidden");
-    resize();
+  $(".imgHolder").css("background-image", "url(../../../../img/GetraenkeMarkt/inside3.jpg)");
+  $("#imageSizer").attr("src", "../../../../img/GetraenkeMarkt/inside3.jpg")
+  $(".doorNo31").css("visibility", "visible");
+  $(".doorNo32").css("visibility", "visible");
+  $(".doorNo41").css("visibility", "hidden");
+  $(".doorNo42").css("visibility", "hidden");
+  resize();
 }
 
 
 
 function insideFour() {
-    $(".imgHolder").css("background-image", "url(../../../../img/GetraenkeMarkt/shelf.jpg)");
-    $("#imageSizer").attr("src", "../../../../img/GetraenkeMarkt/shelf.jpg");
-    $("#imageSizer").width($(window).width());
-    $("#imageSizer").height($(window).height());
-    $(".doorNo41").css("visibility", "hidden");
-    $(".doorNo42").css("visibility", "hidden");
-    
-    gameStart();
-    
+  $(".imgHolder").css("background-image", "url(../../../../img/GetraenkeMarkt/shelf.jpg)");
+  $("#imageSizer").attr("src", "../../../../img/GetraenkeMarkt/shelf.jpg");
+  $("#imageSizer").width($(window).width());
+  $("#imageSizer").height($(window).height());
+  $(".doorNo41").css("visibility", "hidden");
+  $(".doorNo42").css("visibility", "hidden");
+
+  gameStart();
+
 }
 
 function gameStart() {
-    
-    window.location.replace('gameAf.html');
-  
+
+  window.location.replace('gameAf.html');
+
 }
 
 function gameBegin() {
-    points = 50;
-    count = 0;
-    for (var i = choices.length; i >= 1; i--) {
-        var choice = choices[Math.floor(Math.random() * choices.length)];
+  points = 50;
+  count = 0;
+  for (var i = choices.length; i >= 1; i--) {
+    var choice = choices[Math.floor(Math.random() * choices.length)];
 
-        choices.splice($.inArray(choice, choices), 1);
+    choices.splice($.inArray(choice, choices), 1);
 
-        var URL = choice.url;
-        var attribute = choice.alk;
-        var piece = $(".piece" + i);
-        $(piece).attr("value", attribute);
-        $(piece).css("background-image", "url(" + URL + ")");
+    var URL = choice.url;
+    var attribute = choice.alk;
+    var piece = $(".piece" + i);
+    $(piece).attr("value", attribute);
+    $(piece).css("background-image", "url(" + URL + ")");
 
-        
-    }
+
+  }
 }
 
 var checksum = 0;
 var points = 50;
 
 function check() {
-    checksum++;
-    var sender = $(window.event.target);
-    var attribute = $(sender).attr("value");
-    
+  checksum++;
+  var sender = $(window.event.target);
+  var attribute = $(sender).attr("value");
 
-    if (checksum <= 1) {
-        
-        if (attribute == "true") {
-            $(sender).css("border", "2px solid rgb(25, 255, 25)");
-            points += 50;
-        } else {
-            $(sender).css("border", "2px solid red");
-            points -= 25;
-        }
-    }else {
-        congrats();
+
+  if (checksum <= 1) {
+
+    if (attribute == "true") {
+      $(sender).css("border", "2px solid rgb(25, 255, 25)");
+      points += 50;
+    } else {
+      $(sender).css("border", "2px solid red");
+      points -= 25;
     }
-    
-    
-    clearTimeout(counter);
+  } else {
+    congrats();
+  }
+
+
+  clearTimeout(counter);
 
 }
 
 var score;
 
 function congrats() {
-    score = points - count;
-    if (score <= 0) {
-        score = 0;
-    }
-    var r = confirm("Das war schon sehr gut! Du hast "+ count +" sekunden gebraucht und dabei "+ score +" Punkte erreicht. Drücke OK wenn du es nocheinmal probieren möchtest oder Cancel wenn du die Nächste Runde spielen möchtest.");
-    if (r == true) {
-        nextRound();
-    } else {
-        retry();
-    }
+  score = points - count;
+  if (score <= 0) {
+    score = 0;
+  }
+  var r = confirm("Das war schon sehr gut! Du hast " + count + " sekunden gebraucht und dabei " + score + " Punkte erreicht. Drücke OK wenn du es nocheinmal probieren möchtest oder Cancel wenn du die Nächste Runde spielen möchtest.");
+  if (r == true) {
+    nextRound();
+  } else {
+    retry();
+  }
 }
 
 function retry() {
-    gameBegin();
+  gameBegin();
 }
 
 var round = 0;
@@ -225,38 +242,37 @@ var roundTwoTime;
 var roundThreeTime;
 
 function nextRound() {
-    round++;
-    if (round = 1) {
-        roundOnePoints = score;
-        roundOneTime = count;
-        for (var i = choices.length; i >= 1; i--) {
-            $(".piece" + i).css("border", "none");
-        }
-    } else if (round = 2) {
-        roundTwoPoints = score;
-        roundTwoTime = count;
-        for (var i = choices.length; i >= 1; i--) {
-            $(".piece" + i).css("border", "none");
-        }
-    } else if (round = 3) {
-        roundThreePoints = score;
-        roundThreeTime = count;
-        for (var i = choices.length; i >= 1; i--) {
-            $(".piece" + i).css("border", "none");}
-        endGameProtocol();
+  round++;
+  if (round = 1) {
+    roundOnePoints = score;
+    roundOneTime = count;
+    for (var i = choices.length; i >= 1; i--) {
+      $(".piece" + i).css("border", "none");
     }
-   
+  } else if (round = 2) {
+    roundTwoPoints = score;
+    roundTwoTime = count;
+    for (var i = choices.length; i >= 1; i--) {
+      $(".piece" + i).css("border", "none");
+    }
+  } else if (round = 3) {
+    roundThreePoints = score;
+    roundThreeTime = count;
+    for (var i = choices.length; i >= 1; i--) {
+      $(".piece" + i).css("border", "none");
+    }
+    endGameProtocol();
+  }
+
 }
-
-
 
 var count = 0;
 var counter = setInterval(timerStart, 1000);
 
 function timerStart() {
-    
-    count++;
-    $(".timer").text(count);
+
+  count++;
+  $(".timer").text(count);
 }
 
 
@@ -264,11 +280,11 @@ function timerStart() {
 
 
 function endGameProtocol() {
-    var endScore = roundOnePoints + roundTwoPoints + roundThreePoints;
-    var endTime = roundOneTime + roundTwoTime + roundThreeTime;
-    $(".randombox").css("visibility", "hidden");
-    var e = '<p class="endScreen">Herzlichen Glückwunsch! Du hast '+ endScore +' Punkte in insgesamt '+ endTime +' Sekunden erreicht!</p>';
-    $("body").append(e);
+  var endScore = roundOnePoints + roundTwoPoints + roundThreePoints;
+  var endTime = roundOneTime + roundTwoTime + roundThreeTime;
+  $(".randombox").css("visibility", "hidden");
+  var e = '<p class="endScreen">Herzlichen Glückwunsch! Du hast ' + endScore + ' Punkte in insgesamt ' + endTime + ' Sekunden erreicht!</p>';
+  $("body").append(e);
 }
 //ZOOM
 

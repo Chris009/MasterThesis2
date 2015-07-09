@@ -14,3 +14,15 @@ function settingsNav() {
     window.location.replace('pages/settings/settings.html');
 }
 
+
+$("#login-button").click(function(event){
+    check();
+
+  $('form').fadeOut(500);
+  $('.wrapper').addClass('form-success');
+});
+
+
+function check(){
+
+}
