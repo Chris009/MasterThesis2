@@ -5,17 +5,17 @@ var map = null;
 
 
 function homeNav() {
-   
+
     window.location.replace('../start/start.html');
-  
+
 }
 
 
 
 function sammoNav() {
-   
+
     window.location.replace('Games/SammoGame/sammo.html');
-  
+
 }
 
 function wsNav() {
@@ -61,16 +61,16 @@ function getMap() {
             bounds: boundingBox,
             mapTypeId: Microsoft.Maps.MapTypeId.road
         });
-    
+
     //============================== Push Pins
-    // Retrieve the location of the map center 
+    // Retrieve the location of the map center
     //Sammo
     var locationSammo = new Microsoft.Maps.Location(49.4859215, 8.4643577);
     var sammoPinOptions = {
         width: null, height: null,
         htmlContent: "<div class='pushpin'>Café Sammo</div>"
     };
-    //Woodstöckl 
+    //Woodstöckl
     var locationWs = new Microsoft.Maps.Location(49.4972434, 8.4701803);
     var wsPinOptions = {
         width: null, height: null,
@@ -92,7 +92,7 @@ function getMap() {
 
     // Add a pin to the cafe location of the map
     //Sammo
-    var pinSammo = new Microsoft.Maps.Pushpin(locationSammo, sammoPinOptions); 
+    var pinSammo = new Microsoft.Maps.Pushpin(locationSammo, sammoPinOptions);
     //Woodstöckl
     var pinWs = new Microsoft.Maps.Pushpin(locationWs, wsPinOptions);
     //Spreisel
@@ -102,8 +102,8 @@ function getMap() {
 
     // Create the infobox for the pushpin
     //Sammo
-        pinSammoInfobox = new Microsoft.Maps.Infobox(pinSammo.getLocation(), 
-        {title: 'Café Sammo', 
+        pinSammoInfobox = new Microsoft.Maps.Infobox(pinSammo.getLocation(),
+        {title: 'Café Sammo',
         description: 'Infobox description',
         actions: [{ label: 'GoTo Game', eventHandler: sammoNav }],
         visible: false,
@@ -166,11 +166,11 @@ function getMap() {
     //AF
     map.entities.push(pinAF);
     map.entities.push(pinAFInfobox);
-    
+
 }
 //Sammo
 function displaySammoInfobox(e)
-{pinSammoInfobox.setOptions({ visible:true });}                    
+{pinSammoInfobox.setOptions({ visible:true });}
 function hideSammoInfobox(e)
 { pinSammoInfobox.setOptions({ visible: false }); }
 

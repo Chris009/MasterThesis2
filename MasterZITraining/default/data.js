@@ -4,8 +4,16 @@ var data = {"users":[
   "lastName":"Doe",
   "userName":"NachtBärchi007",
   "password":"admin",
-  "overallScore":"",
+  "overallScore":""
 
   },
-  {"firstName":"Anna", "lastName":"Smith"}
+  {
+  "firstName":"Jane",
+  "lastName":"Doe",
+  "userName":"Nacht007",
+  "password":"admirana",
+  "overallScore":""
+
+  }
+
 ]}
