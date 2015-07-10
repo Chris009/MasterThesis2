@@ -5,7 +5,6 @@ var data = {"users":[
   "userName":"NachtBärchi007",
   "password":"admin",
   "overallScore":""
-
   },
   {
   "firstName":"Jane",
@@ -13,7 +12,20 @@ var data = {"users":[
   "userName":"Nacht007",
   "password":"admirana",
   "overallScore":""
-
+  },
+  {
+  "firstName":"Jane",
+  "lastName":"Doe",
+  "userName":"Day007",
+  "password":"admiranas",
+  "overallScore":""
+  },
+  {
+  "firstName":"Jane",
+  "lastName":"Doe",
+  "userName":"Nacht009",
+  "password":"admir",
+  "overallScore":""
   }
 
 ]}
