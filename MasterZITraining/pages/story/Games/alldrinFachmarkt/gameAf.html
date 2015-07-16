@@ -1,60 +1,59 @@
-﻿<!DOCTYPE html>
+
+<!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
+
 <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <script src="../../../../Scripts/jquery-1.9.1.min.js"></script>
-    <script src="../../../../Scripts/jquery-ui.min.js"></script>
-    <link href="../../../../Content/bootstrap.min.css" rel="stylesheet" />
-    <link href="../../../../default/default.css" rel="stylesheet" />
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <script src="../../../../Scripts/jquery-1.9.1.min.js"></script>
+  <script src="../../../../Scripts/jquery-ui.min.js"></script>
+  <link href="../../../../Content/bootstrap.min.css" rel="stylesheet" />
+  <link href="../../../../default/default.css" rel="stylesheet" />
 
-    <link href="af.css" rel="stylesheet" />
+  <link href="af.css" rel="stylesheet" />
 
-    <link href="../../../../default/Hover-master/css/hover.css" rel="stylesheet" />
-    <title></title>
+  <link href="../../../../default/Hover-master/css/hover.css" rel="stylesheet" />
+  <title></title>
 </head>
+
 <body onload="gameBegin()">
 
-    <nav class="navbar navbar-inverse navbar-fixed-top">
-        <div class="container-fluid">
-            <div class="navbar-header">
-                <button type="button" onclick="backNav()" class="navbutton" aria-label="Left Align">
-                    <span class="navicon glyphicon glyphicon-arrow-left" aria-hidden="true"></span>
-                </button>
-                <button type="button" onclick="homeNav()" class="navbutton" aria-label="Left Align">
-                    <span class="navicon glyphicon glyphicon-home" aria-hidden="true"></span>
-                </button>
-                <!--<button type="button" onclick="zoomIn()" class="navbutton" aria-label="Left Align">
+  <nav class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <button type="button" onclick="backNav()" class="navbutton" aria-label="Left Align">
+          <span class="navicon glyphicon glyphicon-arrow-left" aria-hidden="true"></span>
+        </button>
+        <button type="button" onclick="homeNav()" class="navbutton" aria-label="Left Align">
+          <span class="navicon glyphicon glyphicon-home" aria-hidden="true"></span>
+        </button>
+        <!--<button type="button" onclick="zoomIn()" class="navbutton" aria-label="Left Align">
                     <span class="navicon glyphicon glyphicon-plus" aria-hidden="true"></span>
                 </button>
                 <button type="button" onclick="zoomOut()" class="navbutton" aria-label="Left Align">
                     <span class="navicon glyphicon glyphicon-minus" aria-hidden="true"></span>
                 </button>-->
-            </div>
-        </div>
-    </nav>
-    <label class="timer">0</label>
-    <div class="randombox">
-
-
-
-
-        <div class="piece1 hvr-reveal " onclick="check()"></div>
-        <div class="piece2 hvr-reveal " onclick="check()"></div>
-        <div class="piece3 hvr-reveal " onclick="check()"></div>
-        <div class="piece4 hvr-reveal " onclick="check()"></div>
-        <div class="piece5 hvr-reveal " onclick="check()"></div>
-
-        <img class="gameSizer" src="../../../../img/GetraenkeMarkt/shelf.jpg" />
-
-
-
-
+      </div>
     </div>
+  </nav>
+  <label class="timer">0</label>
+  <div class="congrats_box hidden">
+    <label id="hurra"></label>
+    <button type="button" name="Weiter" id="ok_button" onclick="nextRound()">Weiter</button>
+    <button type="button" name="Wiederholen" id="retry_button" onclick="retry()">Wiederholen</button>
+  </div>
+  <div class="randombox">
+    <div class="piece1 hvr-reveal " onclick="check()"></div>
+    <div class="piece2 hvr-reveal " onclick="check()"></div>
+    <div class="piece3 hvr-reveal " onclick="check()"></div>
+    <div class="piece4 hvr-reveal " onclick="check()"></div>
+    <div class="piece5 hvr-reveal " onclick="check()"></div>
+
+    <img class="gameSizer" src="../../../../img/GetraenkeMarkt/shelf.jpg" />
+  </div>
 
 
-    <script src="af.js"></script>
-    <script src="../../../../Scripts/bootstrap.min.js"></script>
+  <script src="af.js"></script>
+  <script src="../../../../Scripts/bootstrap.min.js"></script>
 </body>
+
 </html>
-
-

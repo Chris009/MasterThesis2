@@ -191,7 +191,7 @@ var checksum = 0;
 var points = 50;
 
 function check() {
-  checksum++;
+  ++checksum;
   var sender = $(window.event.target);
   var attribute = $(sender).attr("value");
 
@@ -208,28 +208,28 @@ function check() {
   } else {
     congrats();
   }
-
-
-  clearTimeout(counter);
-
 }
 
 var score;
 
 function congrats() {
+
+  checksum = 0;
   score = points - count;
   if (score <= 0) {
     score = 0;
   }
-  var r = confirm("Das war schon sehr gut! Du hast " + count + " sekunden gebraucht und dabei " + score + " Punkte erreicht. Drücke OK wenn du es nocheinmal probieren möchtest oder Cancel wenn du die Nächste Runde spielen möchtest.");
-  if (r == true) {
-    nextRound();
-  } else {
-    retry();
-  }
+  $(".randombox").addClass("hidden");
+  var e = "Das war schon sehr gut! Du hast " + count + " sekunden gebraucht und dabei " + score + " Punkte erreicht. Drücke OK wenn du es nocheinmal probieren möchtest oder Cancel wenn du die Nächste Runde spielen möchtest.";
+  $(".congrats_box").removeClass("hidden");
+  $("#hurra").append(e);
 }
 
 function retry() {
+  $(".randombox").removeClass("hidden");
+  for (var i = choices.length; i >= 1; i--) {
+    $(".piece" + i).css("border-style", "none");
+  }
   gameBegin();
 }
 
@@ -242,24 +242,25 @@ var roundTwoTime;
 var roundThreeTime;
 
 function nextRound() {
+  $(".randombox").removeClass("hidden");
   round++;
   if (round = 1) {
     roundOnePoints = score;
     roundOneTime = count;
     for (var i = choices.length; i >= 1; i--) {
-      $(".piece" + i).css("border", "none");
+      $(".piece" + i).css("border-style", "none");
     }
   } else if (round = 2) {
     roundTwoPoints = score;
     roundTwoTime = count;
     for (var i = choices.length; i >= 1; i--) {
-      $(".piece" + i).css("border", "none");
+      $(".piece" + i).css("border-style", "none");
     }
   } else if (round = 3) {
     roundThreePoints = score;
     roundThreeTime = count;
     for (var i = choices.length; i >= 1; i--) {
-      $(".piece" + i).css("border", "none");
+      $(".piece" + i).css("border-style", "none");
     }
     endGameProtocol();
   }
@@ -280,9 +281,9 @@ function timerStart() {
 
 
 function endGameProtocol() {
+  $(".randombox").addClass("hidden");
   var endScore = roundOnePoints + roundTwoPoints + roundThreePoints;
   var endTime = roundOneTime + roundTwoTime + roundThreeTime;
-  $(".randombox").css("visibility", "hidden");
   var e = '<p class="endScreen">Herzlichen Glückwunsch! Du hast ' + endScore + ' Punkte in insgesamt ' + endTime + ' Sekunden erreicht!</p>';
   $("body").append(e);
 }

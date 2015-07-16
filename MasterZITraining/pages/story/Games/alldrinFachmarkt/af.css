@@ -230,3 +230,30 @@ body {
 .endScreen {
   font-size: 25px;
 }
+.congrats_box{
+  width: 500px;
+  height: 500px;
+  top:50%;
+  left:50%;
+  right:50%;
+  bottom:50%;
+  background-color: rgba(255, 255, 255, 0.5);
+  border: 2px solid white;
+  border-radius: 5px;
+}
+
+#ok_button{
+  left: 15px;
+  width: 50px;
+  height: 20px;
+  color: white;
+  background-color: rgba(255, 255, 255, 0.5);
+}
+
+#retry_button{
+  right: 15px;
+  width: 50px;
+  height: 20px;
+  color: white;
+  background-color: rgba(255, 255, 255, 0.5);
+}
