@@ -111,6 +111,7 @@ function insideOut() {
 function insideTwo() {
   $(".imgHolder").css("background-image", "url(../../../../img/GetraenkeMarkt/inside3.jpg)");
   $("#imageSizer").attr("src", "../../../../img/GetraenkeMarkt/inside3.jpg")
+  $("#imageSizer").css("width", "2913.4px");
   $(".doorNo21").css("visibility", "hidden");
   $(".doorNo22").css("visibility", "hidden");
   $(".doorNo31").css("visibility", "visible");
@@ -211,6 +212,7 @@ function check() {
 }
 
 var score;
+var e = "<label id='hurra'>Das war schon sehr gut! Du hast " + count + " sekunden gebraucht und dabei " + score + " Punkte erreicht. Drücke OK wenn du es nocheinmal probieren möchtest oder Cancel wenn du die Nächste Runde spielen möchtest.</label>";
 
 function congrats() {
 
@@ -220,13 +222,14 @@ function congrats() {
     score = 0;
   }
   $(".randombox").addClass("hidden");
-  var e = "Das war schon sehr gut! Du hast " + count + " sekunden gebraucht und dabei " + score + " Punkte erreicht. Drücke OK wenn du es nocheinmal probieren möchtest oder Cancel wenn du die Nächste Runde spielen möchtest.";
+
   $(".congrats_box").removeClass("hidden");
   $("#hurra").append(e);
 }
 
 function retry() {
   $(".randombox").removeClass("hidden");
+  $(".congrats_box").remove("#hurra");
   for (var i = choices.length; i >= 1; i--) {
     $(".piece" + i).css("border-style", "none");
   }
@@ -243,6 +246,7 @@ var roundThreeTime;
 
 function nextRound() {
   $(".randombox").removeClass("hidden");
+  $(".congrats_box").remove("#hurra");
   round++;
   if (round = 1) {
     roundOnePoints = score;
@@ -282,10 +286,11 @@ function timerStart() {
 
 function endGameProtocol() {
   $(".randombox").addClass("hidden");
+  $(".congrats_box").remove("#hurra");
   var endScore = roundOnePoints + roundTwoPoints + roundThreePoints;
   var endTime = roundOneTime + roundTwoTime + roundThreeTime;
-  var e = '<p class="endScreen">Herzlichen Glückwunsch! Du hast ' + endScore + ' Punkte in insgesamt ' + endTime + ' Sekunden erreicht!</p>';
-  $("body").append(e);
+  e = '<p class="endScreen">Herzlichen Glückwunsch! Du hast ' + endScore + ' Punkte in insgesamt ' + endTime + ' Sekunden erreicht!</p>';
+  $(".congrats_box").append(e);
 }
 //ZOOM
 
