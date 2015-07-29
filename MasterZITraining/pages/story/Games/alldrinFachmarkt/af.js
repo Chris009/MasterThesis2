@@ -169,23 +169,39 @@ function gameStart() {
   window.location.replace('gameAf.html');
 
 }
+var newArr = [];
 
 function gameBegin() {
-  points = 50;
+
   count = 0;
-  for (var i = choices.length; i >= 1; i--) {
-    var choice = choices[Math.floor(Math.random() * choices.length)];
+  if (round = 0) {
+    for (var i = choices.length; i >= 1; i--) {
+      var choice = choices[Math.floor(Math.random() * choices.length)];
 
-    choices.splice($.inArray(choice, choices), 1);
+      choices.splice($.inArray(choice, choices), 1);
 
-    var URL = choice.url;
-    var attribute = choice.alk;
-    var piece = $(".piece" + i);
-    $(piece).attr("value", attribute);
-    $(piece).css("background-image", "url(" + URL + ")");
+      var URL = choice.url;
+      var attribute = choice.alk;
+      var piece = $(".piece" + i);
+      $(piece).attr("value", attribute);
+      $(piece).css("background-image", "url(" + URL + ")");
+    }
+  } else {
 
+    for (var i = 5; i >= 1; i--) {
+      var cssURL = $(".piece" + i).css("background-image");
+      cssURL = cssURL.replace('url(', '').replace(')', '');
+      newArr.push(cssURL);
+    }
+
+    for (var i = newArr.length; i >= 1; i--) {
+      var newCssUrl = newArr[Math.floor(Math.random() * newArr.length)];
+      newArr.splice($.inArray(newCssUrl, newArr), 1);
+      $(".piece" + i).css("background-image", "url(" + newCssUrl + ")");
+    }
 
   }
+
 }
 
 var checksum = 0;
@@ -230,13 +246,13 @@ function congrats() {
 function retry() {
   $(".randombox").removeClass("hidden");
   $(".congrats_box").remove("#hurra");
-  for (var i = choices.length; i >= 1; i--) {
-    $(".piece" + i).css("border-style", "none");
+  for (var i = 5; i >= 1; i--) {
+    $(".piece" + i).css("border", "none");
   }
   gameBegin();
 }
 
-var round = 0;
+var round = 1;
 var roundOnePoints;
 var roundTwoPoints;
 var roundThreePoints;
@@ -247,27 +263,29 @@ var roundThreeTime;
 function nextRound() {
   $(".randombox").removeClass("hidden");
   $(".congrats_box").remove("#hurra");
-  round++;
+
   if (round = 1) {
     roundOnePoints = score;
     roundOneTime = count;
     for (var i = choices.length; i >= 1; i--) {
-      $(".piece" + i).css("border-style", "none");
+      $(".piece" + i).css("border", "none");
     }
   } else if (round = 2) {
     roundTwoPoints = score;
     roundTwoTime = count;
     for (var i = choices.length; i >= 1; i--) {
-      $(".piece" + i).css("border-style", "none");
+      $(".piece" + i).css("border", "none");
     }
   } else if (round = 3) {
     roundThreePoints = score;
     roundThreeTime = count;
     for (var i = choices.length; i >= 1; i--) {
-      $(".piece" + i).css("border-style", "none");
+      $(".piece" + i).css("border", "none");
     }
     endGameProtocol();
   }
+  round++;
+  gameBegin();
 
 }
 
