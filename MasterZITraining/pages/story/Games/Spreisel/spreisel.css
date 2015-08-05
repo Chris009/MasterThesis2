@@ -1,111 +1,178 @@
-﻿.doorNo1 {
-    position: absolute;
-    width: 513px;
-    height: 476px;
-    top: 33%;
-    left: 11.5%;
-    -moz-transform: matrix(1, 0.02, 0, 1, 0, 0);
-    -ms-transform: matrix(1, 0.02, 0, 1, 0, 0);
-    -o-transform: matrix(1, 0.02, 0, 1, 0, 0);
-    -webkit-transform: matrix(1, 0.02, 0, 1, 0, 0);
-    transform: matrix(1, -0.03, 0.02, 1, 0, 0);
-}
-
-.doorNo2 {
-   position: absolute;
-   width: 500px;
-  height: 66px;
-  top: 23%;
-  left: 11.5%;
-  visibility: hidden;
-  background-color: rgba(0,0,0,0.8);
-  color: white;
-  font-size: 20px;
-  padding-top: 20px;
-}
-
-.doorNo3 {
-    position: absolute;
-    width: 202px;
-    height: 48px;
-    top: 76.5%;
-    left: 41.5%;
-    visibility: hidden;
-    -moz-transform: matrix(1, 0.15, -1.99, 0.9, 1.5, 10);
-    -ms-transform: matrix(1, 0.15, -1.99, 0.9, 1.5, 10);
-    -o-transform: matrix(1, 0.15, -1.99, 0.9, 1.5, 10);
-    -webkit-transform: matrix(1, 0.15, -1.99, 0.9, 1.5, 10);
-    transform: matrix(1, 0.15, -1.99, 0.9, 1.5, 10);
-}
-
-.menueGame{
+.doorNo1 {
   position: absolute;
-  width: 537px;
-  height: 401px;
-  top: 12.5%;
-  left: 0%;
-  visibility: hidden;
-  -moz-transform: matrix(1, 0.15, -1.99, 0.9, 1.5, 10);
-  -ms-transform: matrix(1, 0.15, -1.99, 0.9, 1.5, 10);
-  -o-transform: matrix(1, 0.15, -1.99, 0.9, 1.5, 10);
-  -webkit-transform: matrix(1, 0.15, -1.99, 0.9, 1.5, 10);
-  transform: matrix(1, -0.09, 0, 1, 0, 0);
+  width: 722px;
+  height: 704px;
+  top: 27%;
+  left: 36.5%;
+  -moz-transform: matrix(1, 0, 0.02, 1, 0, 0);
+  -ms-transform: matrix(1, 0, 0.02, 1, 0, 0);
+  -o-transform: matrix(1, 0, 0.02, 1, 0, 0);
+  -webkit-transform: matrix(1, 0, 0.02, 1, 0, 0);
+  transform: matrix(1, 0, 0.02, 1, 0, 0);
 }
-
-
-
+.doorNo2 {
+  position: absolute;
+  width: 600px;
+  height: 75px;
+  top: 14%;
+  background-color: rgba(0, 0, 0, 0.7);
+  left: 52.5%;
+  -moz-transform: matrix(1, 0, 0, 1, 0, 0);
+  -ms-transform: matrix(1, 0, 0, 1, 0, 0);
+  -o-transform: matrix(1, 0, 0, 1, 0, 0);
+  -webkit-transform: matrix(1, 0, 0, 1, 0, 0);
+  transform: matrix(1, 0, 0, 1, 0, 0);
+  font-size: 25px;
+  color: white;
+  border: 2px solid white;
+  white-space: normal;
+}
+.doorNo3 {
+  position: absolute;
+  width: 417px;
+  height: 40px;
+  top: 48%;
+  background-color: rgba(0, 0, 0, 0.7);
+  left: 6.5%;
+  -moz-transform: matrix(1, 0, 0, 1, 0, 0);
+  -ms-transform: matrix(1, 0, 0, 1, 0, 0);
+  -o-transform: matrix(1, 0, 0, 1, 0, 0);
+  -webkit-transform: matrix(1, 0, 0, 1, 0, 0);
+  transform: matrix(1, 0, 0, 1, 0, 0);
+  font-size: 25px;
+  color: white;
+  border: 2px solid white;
+  white-space: normal;
+}
+.doorNo31 {
+  position: absolute;
+  width: 417px;
+  height: 40px;
+  top: 48%;
+  background-color: rgba(0, 0, 0, 0.7);
+  left: 30.5%;
+  -moz-transform: matrix(1, 0, 0, 1, 0, 0);
+  -ms-transform: matrix(1, 0, 0, 1, 0, 0);
+  -o-transform: matrix(1, 0, 0, 1, 0, 0);
+  -webkit-transform: matrix(1, 0, 0, 1, 0, 0);
+  transform: matrix(1, 0, 0, 1, 0, 0);
+  font-size: 25px;
+  color: white;
+  border: 2px solid white;
+  white-space: normal;
+}
+.doorNo32 {
+  position: absolute;
+  width: 417px;
+  height: 40px;
+  top: 48%;
+  background-color: rgba(0, 0, 0, 0.7);
+  left: 58.5%;
+  -moz-transform: matrix(1, 0, 0, 1, 0, 0);
+  -ms-transform: matrix(1, 0, 0, 1, 0, 0);
+  -o-transform: matrix(1, 0, 0, 1, 0, 0);
+  -webkit-transform: matrix(1, 0, 0, 1, 0, 0);
+  transform: matrix(1, 0, 0, 1, 0, 0);
+  font-size: 25px;
+  color: white;
+  border: 2px solid white;
+  white-space: normal;
+}
+.doorNo33 {
+  position: absolute;
+  width: 417px;
+  height: 40px;
+  top: 60%;
+  background-color: rgba(0, 0, 0, 0.7);
+  left: 87.5%;
+  -moz-transform: matrix(1, 0, 0, 1, 0, 0);
+  -ms-transform: matrix(1, 0, 0, 1, 0, 0);
+  -o-transform: matrix(1, 0, 0, 1, 0, 0);
+  -webkit-transform: matrix(1, 0, 0, 1, 0, 0);
+  transform: matrix(1, 0, 0, 1, 0, 0);
+  font-size: 25px;
+  color: white;
+  border: 2px solid white;
+  white-space: normal;
+}
 .imgHolder {
-    margin-left: 20%;
-    position: absolute;
-    width: 640px;
-    height: 850px;
-    background-image: url(img/SpreiselEingang.jpg);
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center center;
+  position: absolute;
+  background-image: url(../../../../img/spreisel/spreiselOutside.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
 }
-
-.imageCup {
+#imageSizer {
+  height: 1200px;
 }
-
 .stop-scrolling {
-    height: 100%;
-    width: 100%;
-    overflow: hidden;
-    position: fixed;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+  position: fixed;
 }
-
 #containment {
-    position: absolute;
-    background-color: aqua;
+  position: absolute;
+  background-color: aqua;
 }
-
-.choice {
-    height: 280px;
-    width: 280px;
-    margin: 5px;
-    z-index: 2;
-}
-
-    .choice:hover {
-        border: 2px solid blue;
-    }
-
-.randomBox {
-    height: 900px;
-    width: 900px;
-    position: absolute;
-    border: 2px solid white;
-    background: rgba(0,0,0,0.8);
-    z-index: 1;
-}
-
-
-
-
-
 body {
-    text-align: center;
+  text-align: center;
+}
+#randombox {
+  background-image: url(./../../../../img/spreisel/spreiselInside3.jpg);
+  height: 121%;
+  width: 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  margin-top: -10%;
+
+}
+.gameDoor {
+  position: absolute;
+  width: 64%;
+  height: 82.7%;
+  top: 17%;
+  left: 17.5%;
+  -moz-transform: matrix(1, 0, 0.02, 1, 0, 0);
+  -ms-transform: matrix(1, 0, 0.02, 1, 0, 0);
+  -o-transform: matrix(1, 0, 0.02, 1, 0, 0);
+  -webkit-transform: matrix(1, 0, 0.02, 1, 0, 0);
+  transform: matrix(1, 0, 0.02, 1, 0, 0);
+}
+.gameBox {
+  position: absolute;
+  width: 72%;
+  height: 88.7%;
+  top: 5.5%;
+  left: 15%;
+
+  padding: 2%;
+  background-color: rgba(255, 238, 47, 1);
+
 }
 
+.proto {
+  -moz-transform: matrix(1, 0, 0., 1, 0, 0);
+  -ms-transform: matrix(1, 0, 0., 1, 0, 0);
+  -o-transform: matrix(1, 0, 0, 1, 0, 0);
+  -webkit-transform: matrix(1, 0, 0, 1, 0, 0);
+  transform: matrix(1, 0, 0, 1, 0, 0);
+  text-align: justify;
+  margin-top: 1%;
+  border: 1px solid black;
+  width: 40%;
+  height: 22%;
+  display: inline-block;
+}
+.proto img{
+  margin: 5px;
+  height: 100px;
+  width: 100px;
+}
 
+.item{
+  margin-left: 15px;
+}
+.price{
+
+}

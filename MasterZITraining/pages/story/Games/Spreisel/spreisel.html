@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <script src="../../../../Scripts/jquery-1.9.1.min.js"></script>
+    <script src="../../../../Scripts/jquery-2.1.4.min.js"></script>
     <script src="../../../../Scripts/jquery-ui.min.js"></script>
     <link href="../../../../Content/bootstrap.min.css" rel="stylesheet" />
     <link href="../../../../default/default.css" rel="stylesheet" />
@@ -33,20 +33,25 @@
         </div>
     </nav>
 
+  <div id="containment">
     <div class="imgHolder" id="makeMeDraggable">
-        <div class="doorNo1 hvr-reveal" onclick="doorToBar()"></div>
-        <div class="doorNo2" onclick="doorToTable()">Einen schönen guten Tag, nehmen sie bitte Platz!</div>
-        <div class="doorNo3" onclick="doorToMenu()"></div>
-        <div class="menueGame" onclick="startGame()"></div>
-        <div class="randomBox hidden"></div>
-    </div>
+    <div class="doorNo1 hvr-reveal" onclick="outsideIn()"></div>
+    <div class="doorNo2 hvr-reveal hidden" onclick="insideToTables()">Herzlich willkommen im Spreisel! Suchen sie sich einfach einen Tisch aus!</div>
+    <div class="doorNo3 hvr-reveal hidden" onclick="tablesChoice()">Hier hinsetzen</div>
+    <div class="doorNo31 hvr-reveal hidden" onclick="tablesChoice()">Hier hinsetzen</div>
+    <div class="doorNo32 hvr-reveal hidden" onclick="tablesChoice()">Hier hinsetzen</div>
+    <div class="doorNo33 hvr-reveal hidden" onclick="tablesChoice()">Hier hinsetzen</div>
+    <div class="doorNo4 hvr-reveal hidden" onclick="gameStart()"></div>
 
 
+
+
+    <img id="imageSizer" src="../../../../img/spreisel/spreiselOutside.jpg" style="visibility:hidden" />
+  </div>
+</div>
 
 
     <script src="spreisel.js"></script>
     <script src="../../../../Scripts/bootstrap.min.js"></script>
 </body>
 </html>
-
-

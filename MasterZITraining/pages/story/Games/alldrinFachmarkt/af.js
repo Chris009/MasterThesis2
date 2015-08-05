@@ -23,7 +23,7 @@ var choices = [{
   url: "./../../../../img/GetraenkeMarkt/piece5.jpg"
 }, ];
 
-
+//var choicesLength = choices.length();
 
 function backNav() {
 
@@ -175,7 +175,7 @@ function gameBegin() {
 
   count = 0;
   if (round = 0) {
-    for (var i = choices.length; i >= 1; i--) {
+    for (var i = choicesLength; i >= 1; i--) {
       var choice = choices[Math.floor(Math.random() * choices.length)];
 
       choices.splice($.inArray(choice, choices), 1);
@@ -188,13 +188,13 @@ function gameBegin() {
     }
   } else {
 
-    for (var i = 5; i >= 1; i--) {
+    for (var i = choicesLength; i >= 1; i--) {
       var cssURL = $(".piece" + i).css("background-image");
       cssURL = cssURL.replace('url(', '').replace(')', '');
       newArr.push(cssURL);
     }
 
-    for (var i = newArr.length; i >= 1; i--) {
+    for (var i = choicesLength; i >= 1; i--) {
       var newCssUrl = newArr[Math.floor(Math.random() * newArr.length)];
       newArr.splice($.inArray(newCssUrl, newArr), 1);
       $(".piece" + i).css("background-image", "url(" + newCssUrl + ")");
@@ -246,7 +246,7 @@ function congrats() {
 function retry() {
   $(".randombox").removeClass("hidden");
   $(".congrats_box").remove("#hurra");
-  for (var i = 5; i >= 1; i--) {
+  for (var i = choicesLength; i >= 1; i--) {
     $(".piece" + i).css("border", "none");
   }
   gameBegin();
