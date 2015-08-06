@@ -152,6 +152,7 @@ body {
 }
 
 .proto {
+  background-color: rgba(0, 0, 0, 0.1);
   -moz-transform: matrix(1, 0, 0., 1, 0, 0);
   -ms-transform: matrix(1, 0, 0., 1, 0, 0);
   -o-transform: matrix(1, 0, 0, 1, 0, 0);
@@ -174,5 +175,20 @@ body {
   margin-left: 15px;
 }
 .price{
+  font-weight: bold;
+}
+.title{
+  font-size: 30px;
+}
+
+.congratsBox {
+  position: absolute;
+  width: 72%;
+  height: 88.7%;
+  top: 5.5%;
+  left: 15%;
+
+  padding: 2%;
+  background-color: rgba(50, 50, 50, 1);
 
 }

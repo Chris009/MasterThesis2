@@ -1,9 +1,7 @@
-﻿
-
 var choices = [
     { title: "Cappucino", alk: false, url: "./../../../../img/drinks/Cappuccino.jpg", text:"Milchkaffee mit Milchschaum",price:"4.50€" },
     { title: "Kaffee", alk: false, url: "./../../../../img/drinks/kaffeSchwarz.JPG", text:"Kaffee schwarz",price:"3.50€" },
-    { title: "Long Drink", alk: false, url: "./../../../../img/drinks/longDrink.jpg", text: "Ein alkoholischer Long Drink (fruchtig)", price: "6.50€" },
+    { title: "Long Drink", alk: true, url: "./../../../../img/drinks/longDrink.jpg", text: "Ein alkoholischer Long Drink (fruchtig)", price: "6.50€" },
     { title: "Bier", alk: true, url: "./../../../../img/drinks/Bier.jpg", text: "Unser Hausbier, kühl und erfrischend", price: "4.50€" },
     { title: "Cola", alk: false, url: "./../../../../img/drinks/Cola.jpg", text: "Coca Cola, koffeinhaltig", price: "3.50€" },
     { title: "Fanta", alk: false, url: "./../../../../img/drinks/fanta.png", text: "Fanta, Orangenlimonade", price: "3.50€" },
@@ -108,11 +106,10 @@ function timerStart() {
   $(".timer").text(count);
 }
 
-
-
 var arrLength = choices.length;
 
 function gameStart(){
+
   for(var i = arrLength; i >=1; i--){
     var choice = choices[Math.floor(Math.random() * choices.length)];
     choices.splice($.inArray(choice, choices), 1);
@@ -121,7 +118,41 @@ function gameStart(){
     $(".proto."+i+" .item").text(choice.text);
     $(".proto."+i+" .price").text(choice.price);
     $(".proto."+i+" img").attr("src", choice.url);
+    $(".proto."+i).attr("value",choice.alk);
 
   }
 
+}
+
+var checksum = 0;
+var points = 50;
+var round = 0;
+
+function check(){
+  var sender = $(window.event.target);
+  var attribute = $(sender).attr("value");
+  checksum++;
+  if(checksum <= 1){
+    if(attribute == true){
+      $(sender).css("border", "2px solid rgb(25, 255, 25)");
+      points += 50;
+    }else{
+      $(sender).css("border", "2px solid red");
+      points -= 25;
+    }
+  }else{
+    congrats();
+  }
+}
+
+function retry(){
+  // TODO: implement
+}
+function nextRound(){
+  // TODO: implement
+}
+
+
+function congrats(){
+  // TODO: implement
 }
