@@ -231,30 +231,21 @@ body {
   font-size: 25px;
 
 }
-.congrats_box{
-  width: 500px;
-  height: 500px;
-  top:50%;
-  left:50%;
-  right:50%;
-  bottom:50%;
-  background-color: rgba(255, 255, 255, 0.5);
-  border: 2px solid white;
-  border-radius: 5px;
-}
+.congratsBox {
+  position: absolute;
+  width: 72%;
+  height: 88.7%;
+  top: 5.5%;
+  left: 15%;
 
-#ok_button{
-  left: 15px;
-  width: 50px;
-  height: 20px;
-  color: white;
-  background-color: rgba(255, 255, 255, 0.5);
-}
+  padding: 2%;
+  background-color: rgba(50, 50, 50, 1);
 
-#retry_button{
-  right: 15px;
-  width: 50px;
-  height: 20px;
+}
+.congratsBox label {
+  font-size: 40px;
   color: white;
-  background-color: rgba(255, 255, 255, 0.5);
+}
+.congratsBox button{
+  font-size: 20px;
 }

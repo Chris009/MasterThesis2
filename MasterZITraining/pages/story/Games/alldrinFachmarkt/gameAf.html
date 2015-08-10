@@ -34,13 +34,14 @@
       </div>
     </div>
   </nav>
-  <label class="timer">0</label>
-  <div class="congrats_box hidden">
 
-    <button type="button" name="Weiter" id="ok_button" onclick="nextRound()">Weiter</button>
-    <button type="button" name="Wiederholen" id="retry_button" onclick="retry()">Wiederholen</button>
+  <div class="congratsBox hidden">
+    <button id="retryBtn" onclick="retry()">Wiederholen</button>
+    <button id="nextBtn" onclick="nextRound()">Nächste Runde</button>
+    <button id="homeBtn" class="hidden" onclick="home()">Zurück zur Übersicht</button>
   </div>
   <div class="randombox">
+    <label class="timer">0</label>
     <div class="piece1 hvr-reveal " onclick="check()"></div>
     <div class="piece2 hvr-reveal " onclick="check()"></div>
     <div class="piece3 hvr-reveal " onclick="check()"></div>

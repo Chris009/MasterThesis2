@@ -23,7 +23,7 @@ var choices = [{
   url: "./../../../../img/GetraenkeMarkt/piece5.jpg"
 }, ];
 
-//var choicesLength = choices.length();
+
 
 function backNav() {
 
@@ -169,13 +169,14 @@ function gameStart() {
   window.location.replace('gameAf.html');
 
 }
+var round = 1;
 var newArr = [];
-
+var choicesLength;
 function gameBegin() {
-
+  choicesLength = choices.length;
   count = 0;
-  if (round = 0) {
-    for (var i = choicesLength; i >= 1; i--) {
+  if (round == 1) {
+    for(var i = choicesLength; i >=1; i--) {
       var choice = choices[Math.floor(Math.random() * choices.length)];
 
       choices.splice($.inArray(choice, choices), 1);
@@ -186,20 +187,6 @@ function gameBegin() {
       $(piece).attr("value", attribute);
       $(piece).css("background-image", "url(" + URL + ")");
     }
-  } else {
-
-    for (var i = choicesLength; i >= 1; i--) {
-      var cssURL = $(".piece" + i).css("background-image");
-      cssURL = cssURL.replace('url(', '').replace(')', '');
-      newArr.push(cssURL);
-    }
-
-    for (var i = choicesLength; i >= 1; i--) {
-      var newCssUrl = newArr[Math.floor(Math.random() * newArr.length)];
-      newArr.splice($.inArray(newCssUrl, newArr), 1);
-      $(".piece" + i).css("background-image", "url(" + newCssUrl + ")");
-    }
-
   }
 
 }
@@ -208,48 +195,57 @@ var checksum = 0;
 var points = 50;
 
 function check() {
-  ++checksum;
+
   var sender = $(window.event.target);
   var attribute = $(sender).attr("value");
-
-
+  checksum++;
   if (checksum <= 1) {
-
-    if (attribute == "true") {
-      $(sender).css("border", "2px solid rgb(25, 255, 25)");
+    if (attribute == "false") {
+      $(sender).css("border", "5px solid rgb(25, 255, 25)");
       points += 50;
     } else {
-      $(sender).css("border", "2px solid red");
+      $(sender).css("border", "5px solid red");
       points -= 25;
     }
-  } else {
+  } else if (checksum == 2) {
+
+    if (attribute == "false") {
+      $(sender).css("border", "5px solid rgb(25, 255, 25)");
+      points += 50;
+    } else {
+      $(sender).css("border", "5px solid red");
+      points -= 25;
+    }
+
+    score = points - count;
+    if(score <= 0){
+      score = 0;
+    }
     congrats();
   }
 }
 
 var score;
-var e = "<label id='hurra'>Das war schon sehr gut! Du hast " + count + " sekunden gebraucht und dabei " + score + " Punkte erreicht. Drücke OK wenn du es nocheinmal probieren möchtest oder Cancel wenn du die Nächste Runde spielen möchtest.</label>";
+var e;
 
 function congrats() {
 
-  checksum = 0;
-  score = points - count;
-  if (score <= 0) {
-    score = 0;
-  }
-  $(".randombox").addClass("hidden");
+  e = "<label id='congratsMessage'>Herzlichen Glückwunsch du hast Runde " + round + " absolviert! Du hast dabei " + score + " Punkte in " + count + " Sekunden erreicht!</label>";
 
-  $(".congrats_box").removeClass("hidden");
-  $("#hurra").append(e);
+  $(".randombox").addClass("hidden");
+  $(".congratsBox").removeClass("hidden");
+
+
+  $(".congratsBox").prepend(e);
+
 }
 
 function retry() {
+
+  $("#congratsMessage").remove();
+  $(".congratsBox").addClass("hidden");
   $(".randombox").removeClass("hidden");
-  $(".congrats_box").remove("#hurra");
-  for (var i = choicesLength; i >= 1; i--) {
-    $(".piece" + i).css("border", "none");
-  }
-  gameBegin();
+  gameUpdate();
 }
 
 var round = 1;
@@ -261,32 +257,24 @@ var roundTwoTime;
 var roundThreeTime;
 
 function nextRound() {
-  $(".randombox").removeClass("hidden");
-  $(".congrats_box").remove("#hurra");
-
-  if (round = 1) {
+  if (round == 1) {
     roundOnePoints = score;
     roundOneTime = count;
-    for (var i = choices.length; i >= 1; i--) {
-      $(".piece" + i).css("border", "none");
-    }
-  } else if (round = 2) {
+  } else if (round == 2) {
     roundTwoPoints = score;
     roundTwoTime = count;
-    for (var i = choices.length; i >= 1; i--) {
-      $(".piece" + i).css("border", "none");
-    }
-  } else if (round = 3) {
+    $("#nextBtn").html("Endergebnis");
+  } else {
     roundThreePoints = score;
     roundThreeTime = count;
-    for (var i = choices.length; i >= 1; i--) {
-      $(".piece" + i).css("border", "none");
-    }
-    endGameProtocol();
-  }
-  round++;
-  gameBegin();
 
+  }
+
+  $(".randombox").removeClass("hidden");
+  $(".congratsBox").addClass("hidden");
+  $("#congratsMessage").remove();
+  round++;
+  gameUpdate();
 }
 
 var count = 0;
@@ -299,17 +287,74 @@ function timerStart() {
 }
 
 
+function gameUpdate() {
+
+  count = 0;
+  checksum = 0;
+  points = 50;
+  if (round <= 3) {
+    for (var i = choicesLength; i >= 1; i--) {
+      $(".piece" + i).css("border", "1px solid black");
+    }
+  } else {
+    endGameProtocol();
+  }
+}
 
 
-
-function endGameProtocol() {
+/*function endGameProtocol() {
   $(".randombox").addClass("hidden");
-  $(".congrats_box").remove("#hurra");
+
   var endScore = roundOnePoints + roundTwoPoints + roundThreePoints;
   var endTime = roundOneTime + roundTwoTime + roundThreeTime;
+
   e = '<p class="endScreen">Herzlichen Glückwunsch! Du hast ' + endScore + ' Punkte in insgesamt ' + endTime + ' Sekunden erreicht!</p>';
-  $(".congrats_box").append(e);
+  $("#hurra").append(e);
+}*/
+
+function endGameProtocol() {
+  var endScore = roundOnePoints + roundTwoPoints + roundThreePoints;
+  var endCounter = roundOneTime + roundTwoTime + roundThreeTime;
+  var e = "<label id='congratsMessage'>Herzlichen Glückwunsch du hast das Spiel mit " + endScore + " Punkte in insgesamt " + endCounter + " Sekunden absolviert!</label>";
+  $(".randomBox").addClass("hidden");
+  $(".congratsBox").removeClass("hidden");
+  $("#retryBtn").addClass("hidden");
+  $("#nextBtn").addClass("hidden");
+  $("#homeBtn").removeClass("hidden");
+  $(".congratsBox").prepend(e);
 }
+
+function home() {
+  window.location.replace('../../story.html');
+}
+
+
+/*else {
+
+  for (var i = choicesLength; i >= 1; i--) {
+    var cssURL = $(".piece" + i).css("background-image");
+    cssURL = cssURL.replace('url(', '').replace(')', '');
+    newArr.push(cssURL);
+  }
+
+  for (var i = choicesLength; i >= 1; i--) {
+    var newCssUrl = newArr[Math.floor(Math.random() * newArr.length)];
+    newArr.splice($.inArray(newCssUrl, newArr), 1);
+    $(".piece" + i).css("background-image", "url(" + newCssUrl + ")");
+  }
+
+}
+*/
+
+
+
+
+
+
+
+
+
+
 //ZOOM
 
 //function zoomIn(){
