@@ -192,7 +192,7 @@ function check() {
     }
 
     score = points - count;
-    if(score <= 0){
+    if (score <= 0) {
       score = 0;
     }
     congrats();
@@ -253,14 +253,37 @@ function congrats() {
 }
 
 function gameUpdate() {
-
+  var arrObj = {};
+  var swapArr = [];
   count = 0;
   checksum = 0;
   points = 50;
+
   if (round <= 3) {
     for (var i = arrLength; i >= 1; i--) {
       $(".proto." + i).css("border", "1px solid black");
+
+      arrObj = {
+        title: $(".proto." + i + " .title").text(),
+        alk: $(".proto." + i).attr("value"),
+        url: $(".proto." + i + " img").attr("src"),
+        text: $(".proto." + i + " .item").text(),
+        price: $(".proto." + i + " .price").text()
+      }
+
+      swapArr.push(arrObj);
     }
+    for (var j = arrLength; j >= 1; j--) {
+      var randomObj = swapArr[Math.floor(Math.random() * swapArr.length)];
+      swapArr.splice($.inArray(randomObj, swapArr), 1);
+
+      $(".proto." + j + " .title").text(randomObj.title);
+      $(".proto." + j + " .item").text(randomObj.text);
+      $(".proto." + j + " .price").text(randomObj.price);
+      $(".proto." + j + " img").attr("src", randomObj.url);
+      $(".proto." + j).attr("value", randomObj.alk);
+    }
+
   } else {
     endGameProtocol();
   }

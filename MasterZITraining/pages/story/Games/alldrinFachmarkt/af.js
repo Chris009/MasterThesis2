@@ -183,8 +183,10 @@ function gameBegin() {
 
       var URL = choice.url;
       var attribute = choice.alk;
+      var title = choice.title;
       var piece = $(".piece" + i);
       $(piece).attr("value", attribute);
+      $(piece).attr("title", title);
       $(piece).css("background-image", "url(" + URL + ")");
     }
   }
@@ -288,14 +290,43 @@ function timerStart() {
 
 
 function gameUpdate() {
-
+  var randomObj = {};
+  var swapArr = [];
   count = 0;
   checksum = 0;
   points = 50;
   if (round <= 3) {
     for (var i = choicesLength; i >= 1; i--) {
+
       $(".piece" + i).css("border", "1px solid black");
+
+      var cssURL = $(".piece" + i).css("background-image");
+      cssURL = cssURL.replace('url(', '').replace(')', '');
+
+      arrObj = {
+        title: $(".piece" + i).title,
+        alk: $(".piece" + i).value,
+        url: cssURL
+      }
+      swapArr.push(arrObj);
     }
+      for (var j = choicesLength; j >= 1; j--) {
+        var randomObj = swapArr[Math.floor(Math.random() * swapArr.length)];
+
+        swapArr.splice($.inArray(randomObj, swapArr), 1);
+
+        var URL = randomObj.url;
+        var attribute = randomObj.alk;
+        var title = randomObj.title;
+        var piece = $(".piece" + j);
+        $(piece).attr("value", attribute);
+        $(piece).attr("title", title);
+        $(piece).css("background-image", "url(" + URL + ")");
+      }
+
+
+
+    
   } else {
     endGameProtocol();
   }
