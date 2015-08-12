@@ -172,11 +172,12 @@ function gameStart() {
 var round = 1;
 var newArr = [];
 var choicesLength;
+
 function gameBegin() {
   choicesLength = choices.length;
   count = 0;
   if (round == 1) {
-    for(var i = choicesLength; i >=1; i--) {
+    for (var i = choicesLength; i >= 1; i--) {
       var choice = choices[Math.floor(Math.random() * choices.length)];
 
       choices.splice($.inArray(choice, choices), 1);
@@ -220,7 +221,7 @@ function check() {
     }
 
     score = points - count;
-    if(score <= 0){
+    if (score <= 0) {
       score = 0;
     }
     congrats();
@@ -272,8 +273,10 @@ function nextRound() {
 
   }
 
+if(round <= 2){
   $(".randombox").removeClass("hidden");
   $(".congratsBox").addClass("hidden");
+}
   $("#congratsMessage").remove();
   round++;
   gameUpdate();
@@ -310,45 +313,32 @@ function gameUpdate() {
       }
       swapArr.push(arrObj);
     }
-      for (var j = choicesLength; j >= 1; j--) {
-        var randomObj = swapArr[Math.floor(Math.random() * swapArr.length)];
 
-        swapArr.splice($.inArray(randomObj, swapArr), 1);
+    for (var j = choicesLength; j >= 1; j--) {
+      var randomObj = swapArr[Math.floor(Math.random() * swapArr.length)];
 
-        var URL = randomObj.url;
-        var attribute = randomObj.alk;
-        var title = randomObj.title;
-        var piece = $(".piece" + j);
-        $(piece).attr("value", attribute);
-        $(piece).attr("title", title);
-        $(piece).css("background-image", "url(" + URL + ")");
-      }
+      swapArr.splice($.inArray(randomObj, swapArr), 1);
 
+      var URL = randomObj.url;
+      var attribute = randomObj.alk;
+      var title = randomObj.title;
+      var piece = $(".piece" + j);
+      $(piece).attr("value", attribute);
+      $(piece).attr("title", title);
+      $(piece).css("background-image", "url(" + URL + ")");
+    }
 
-
-    
   } else {
     endGameProtocol();
   }
 }
 
 
-/*function endGameProtocol() {
-  $(".randombox").addClass("hidden");
-
-  var endScore = roundOnePoints + roundTwoPoints + roundThreePoints;
-  var endTime = roundOneTime + roundTwoTime + roundThreeTime;
-
-  e = '<p class="endScreen">Herzlichen Glückwunsch! Du hast ' + endScore + ' Punkte in insgesamt ' + endTime + ' Sekunden erreicht!</p>';
-  $("#hurra").append(e);
-}*/
-
 function endGameProtocol() {
   var endScore = roundOnePoints + roundTwoPoints + roundThreePoints;
   var endCounter = roundOneTime + roundTwoTime + roundThreeTime;
   var e = "<label id='congratsMessage'>Herzlichen Glückwunsch du hast das Spiel mit " + endScore + " Punkte in insgesamt " + endCounter + " Sekunden absolviert!</label>";
-  $(".randomBox").addClass("hidden");
-  $(".congratsBox").removeClass("hidden");
+
   $("#retryBtn").addClass("hidden");
   $("#nextBtn").addClass("hidden");
   $("#homeBtn").removeClass("hidden");
@@ -358,65 +348,3 @@ function endGameProtocol() {
 function home() {
   window.location.replace('../../story.html');
 }
-
-
-/*else {
-
-  for (var i = choicesLength; i >= 1; i--) {
-    var cssURL = $(".piece" + i).css("background-image");
-    cssURL = cssURL.replace('url(', '').replace(')', '');
-    newArr.push(cssURL);
-  }
-
-  for (var i = choicesLength; i >= 1; i--) {
-    var newCssUrl = newArr[Math.floor(Math.random() * newArr.length)];
-    newArr.splice($.inArray(newCssUrl, newArr), 1);
-    $(".piece" + i).css("background-image", "url(" + newCssUrl + ")");
-  }
-
-}
-*/
-
-
-
-
-
-
-
-
-
-
-//ZOOM
-
-//function zoomIn(){
-//    //img
-//    var imgWidth = $('.imgHolder').width() * 1.1;
-//    var imgHeight = $('.imgHolder').width() / aspectRatio;
-//    $('.imgHolder').width(imgWidth);
-//    $('.imgHolder').height(imgHeight);
-
-//    //door1
-//    var door1Width = $('.doorNo1').width() * 1.1;
-//    var door1Height = $('.doorNo1').height() * 1.1;
-//    $('.doorNo1').width(door1Width);
-//    $('.doorNo1').height(door1Height);
-//	resize();
-//}
-
-//function zoomOut() {
-//    //img
-//    var imgWidth = $('.imgHolder').width() * 0.9;
-//    var imgHeight = $('.imgHolder').width() / aspectRatio;
-//    $('.imgHolder').width(imgWidth);
-//    $('.imgHolder').height(imgHeight);
-
-
-
-//    //door1
-//    var door1Width = $('.doorNo1').width() * 0.9;
-//    var door1Height = $('.doorNo1').height() * 0.9;
-//    $('.doorNo1').width(door1Width);
-//    $('.doorNo1').height(door1Height);
-
-//	resize();
-//}
