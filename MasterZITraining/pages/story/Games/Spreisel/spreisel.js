@@ -128,17 +128,22 @@ function tablesChoice() {
   window.location.replace('gameSpreisel.html');
 }
 
-function gameBegin() {
-  $("#randombox").css("background-image", "url(./../../../../img/spreisel/spreiselGame.jpg)")
+function preGame(){
+  $(".preGame").removeClass("hidden");
   $(".gameDoor").addClass("hidden");
+}
+
+function gameBegin() {
+  $("preGame").addClass("hidden");
+  $("#randombox").css("background-image", "url(./../../../../img/spreisel/spreiselGame.jpg)")
   $(".gameBox").removeClass("hidden");
   gameStart();
-  timerStart();
+
 }
 
 
 var count = 0;
-var counter = setInterval(timerStart, 1000);
+var counter;
 
 function timerStart() {
 
@@ -149,7 +154,7 @@ function timerStart() {
 var arrLength = choices.length;
 
 function gameStart() {
-
+  counter = setInterval(timerStart, 1000);
   for (var i = arrLength; i >= 1; i--) {
     var choice = choices[Math.floor(Math.random() * choices.length)];
     choices.splice($.inArray(choice, choices), 1);

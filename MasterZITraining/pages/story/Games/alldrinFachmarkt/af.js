@@ -172,8 +172,19 @@ function gameStart() {
 var round = 1;
 var newArr = [];
 var choicesLength;
+var count = 0;
+var counter;
+
+function timerStart() {
+
+  count++;
+  $(".timer").text(count);
+}
+
 
 function gameBegin() {
+  counter = setInterval(timerStart, 1000);
+  $(".randombox").removeClass("hidden");
   choicesLength = choices.length;
   count = 0;
   if (round == 1) {
@@ -282,14 +293,6 @@ if(round <= 2){
   gameUpdate();
 }
 
-var count = 0;
-var counter = setInterval(timerStart, 1000);
-
-function timerStart() {
-
-  count++;
-  $(".timer").text(count);
-}
 
 
 function gameUpdate() {
