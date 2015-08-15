@@ -1,0 +1,259 @@
+.doorNo1 {
+  position: absolute;
+  width: 17.5%;
+  height: 36.5%;
+  top: 22.5%;
+  left: 43.5%;
+  -moz-transform: matrix(1, 0, 0.02, 1, 0, 0);
+  -ms-transform: matrix(1, 0, 0.02, 1, 0, 0);
+  -o-transform: matrix(1, 0, 0.02, 1, 0, 0);
+  -webkit-transform: matrix(1, 0, 0.02, 1, 0, 0);
+  transform: matrix(1, 0, 0, 1, 0, 0);
+  border: 2px solid grey;
+}
+.imgHolder {
+  position: absolute;
+  background-image: url(../../../../img/balkon/initial.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+#imageSizer {}
+.stop-scrolling {
+  height: 100%;
+  width: 110%;
+  overflow: hidden;
+  position: fixed;
+}
+#containment {
+  position: absolute;
+  background-color: aqua;
+}
+body {
+  text-align: center;
+}
+.gameDoor {
+  position: absolute;
+  width: 32%;
+  height: 88.7%;
+  top: 9%;
+  left: 26.5%;
+  -moz-transform: matrix(1, 0, 0.02, 1, 0, 0);
+  -ms-transform: matrix(1, 0, 0.02, 1, 0, 0);
+  -o-transform: matrix(1, 0, 0.02, 1, 0, 0);
+  -webkit-transform: matrix(1, 0, 0.02, 1, 0, 0);
+  transform: matrix(1, 0, 0.02, 1, 0, 0);
+}
+.gameBox {
+  background-image: url(./../../../../img/balkon/playground.jpg);
+  height: 110%;
+  width: 92%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  margin-top: -3%;
+}
+.proto1 {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  top: 46%;
+  left: 19%;
+  height: 37%;
+  width: 4.4%;
+  position: absolute;
+  -moz-transform: matrix(1, 0, 0, 1, 0, 0);
+  -ms-transform: matrix(1, 0, 0, 1, 0, 0);
+  -o-transform: matrix(1, 0, 0, 1, 0, 0);
+  -webkit-transform: matrix(1, 0, 0, 1, 0, 0);
+  transform: matrix(1, 0, 0, 1, 0, 0);
+}
+.proto2 {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  top: 49.6%;
+  left: 24.5%;
+  height: 37%;
+  width: 4.4%;
+  position: absolute;
+  -moz-transform: matrix(1, 0, 0, 1, 0, 0);
+  -ms-transform: matrix(1, 0, 0, 1, 0, 0);
+  -o-transform: matrix(1, 0, 0, 1, 0, 0);
+  -webkit-transform: matrix(1, 0, 0, 1, 0, 0);
+  transform: matrix(1, 0, 0, 1, 0, 0);
+}
+.proto3 {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  top: 39%;
+  left: 30%;
+  height: 37%;
+  width: 4.4%;
+  position: absolute;
+  -moz-transform: matrix(1, 0, 0, 1, 0, 0);
+  -ms-transform: matrix(1, 0, 0, 1, 0, 0);
+  -o-transform: matrix(1, 0, 0, 1, 0, 0);
+  -webkit-transform: matrix(1, 0, 0, 1, 0, 0);
+  transform: matrix(1, 0, 0, 1, 0, 0);
+}
+.proto4 {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  top: 58%;
+  left: 35.5%;
+  height: 37%;
+  width: 4.4%;
+  position: absolute;
+  -moz-transform: matrix(1, 0, 0, 1, 0, 0);
+  -ms-transform: matrix(1, 0, 0, 1, 0, 0);
+  -o-transform: matrix(1, 0, 0, 1, 0, 0);
+  -webkit-transform: matrix(1, 0, 0, 1, 0, 0);
+  transform: matrix(1, 0, 0, 1, 0, 0);
+}
+.proto5 {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  top: 48%;
+  left: 41.4%;
+  height: 37%;
+  width: 4.4%;
+  position: absolute;
+  -moz-transform: matrix(1, 0, 0, 1, 0, 0);
+  -ms-transform: matrix(1, 0, 0, 1, 0, 0);
+  -o-transform: matrix(1, 0, 0, 1, 0, 0);
+  -webkit-transform: matrix(1, 0, 0, 1, 0, 0);
+  transform: matrix(1, 0, 0, 1, 0, 0);
+}
+.proto6 {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  top: 37%;
+  left: 46.4%;
+  height: 37%;
+  width: 4.4%;
+  position: absolute;
+  -moz-transform: matrix(1, 0, 0, 1, 0, 0);
+  -ms-transform: matrix(1, 0, 0, 1, 0, 0);
+  -o-transform: matrix(1, 0, 0, 1, 0, 0);
+  -webkit-transform: matrix(1, 0, 0, 1, 0, 0);
+  transform: matrix(1, 0, 0, 1, 0, 0);
+}
+.proto7 {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  top: 42%;
+  left: 51.4%;
+  height: 37%;
+  width: 4.4%;
+  position: absolute;
+  -moz-transform: matrix(1, 0, 0, 1, 0, 0);
+  -ms-transform: matrix(1, 0, 0, 1, 0, 0);
+  -o-transform: matrix(1, 0, 0, 1, 0, 0);
+  -webkit-transform: matrix(1, 0, 0, 1, 0, 0);
+  transform: matrix(1, 0, 0, 1, 0, 0);
+}
+.proto8 {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  top: 63%;
+  left: 56.4%;
+  height: 37%;
+  width: 4.4%;
+  position: absolute;
+  -moz-transform: matrix(1, 0, 0, 1, 0, 0);
+  -ms-transform: matrix(1, 0, 0, 1, 0, 0);
+  -o-transform: matrix(1, 0, 0, 1, 0, 0);
+  -webkit-transform: matrix(1, 0, 0, 1, 0, 0);
+  transform: matrix(1, 0, 0, 1, 0, 0);
+}
+.proto9 {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  top: 44%;
+  left: 61.4%;
+  height: 37%;
+  width: 4.4%;
+  position: absolute;
+  -moz-transform: matrix(1, 0, 0, 1, 0, 0);
+  -ms-transform: matrix(1, 0, 0, 1, 0, 0);
+  -o-transform: matrix(1, 0, 0, 1, 0, 0);
+  -webkit-transform: matrix(1, 0, 0, 1, 0, 0);
+  transform: matrix(1, 0, 0, 1, 0, 0);
+}
+.proto10 {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  top: 54%;
+  left: 66.4%;
+  height: 37%;
+  width: 4.4%;
+  position: absolute;
+  -moz-transform: matrix(1, 0, 0, 1, 0, 0);
+  -ms-transform: matrix(1, 0, 0, 1, 0, 0);
+  -o-transform: matrix(1, 0, 0, 1, 0, 0);
+  -webkit-transform: matrix(1, 0, 0, 1, 0, 0);
+  transform: matrix(1, 0, 0, 1, 0, 0);
+}
+.proto11 {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  top: 47%;
+  left: 73.4%;
+  height: 37%;
+  width: 4.4%;
+  position: absolute;
+  -moz-transform: matrix(1, 0, 0, 1, 0, 0);
+  -ms-transform: matrix(1, 0, 0, 1, 0, 0);
+  -o-transform: matrix(1, 0, 0, 1, 0, 0);
+  -webkit-transform: matrix(1, 0, 0, 1, 0, 0);
+  transform: matrix(1, 0, 0, 1, 0, 0);
+}
+.congratsBox {
+  position: absolute;
+  width: 91%;
+  height: 100%;
+  top: 2.5%;
+  left: 0;
+  padding: 2%;
+  background-color: rgba(50, 50, 50, 1);
+}
+.congratsBox label {
+  font-size: 40px;
+  color: white;
+}
+.congratsBox button {
+  font-size: 20px;
+}
+.unClickable {
+  pointer-events: none;
+}
+.timer {
+  font-size: 20px;
+  color: black;
+  position: absolute;
+  top: 5.5%;
+  right: 0;
+  border: 5px solid black;
+  background-color: white;
+  border-radius: 5px;
+  width: 50px;
+}
+.preGame {
+  width: 91%;
+  height: 110%;
+  background-color: rgba(50, 50, 50, 1);
+  margin-top: -1%;
+}
+.description {
+  font-size: 40px;
+  color: white;
+}

@@ -1,0 +1,53 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <script src="../../../../Scripts/jquery-2.1.4.min.js"></script>
+    <script src="../../../../Scripts/jquery-ui.min.js"></script>
+    <link href="../../../../Content/bootstrap.min.css" rel="stylesheet" />
+    <link href="../../../../default/default.css" rel="stylesheet" />
+
+    <link href="balkon.css" rel="stylesheet" />
+
+    <link href="../../../../default/Hover-master/css/hover.css" rel="stylesheet" />
+    <title></title>
+</head>
+<body>
+
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" onclick="backNav()" class="navbutton" aria-label="Left Align">
+                    <span class="navicon glyphicon glyphicon-arrow-left" aria-hidden="true"></span>
+                </button>
+                <button type="button" onclick="homeNav()" class="navbutton" aria-label="Left Align">
+                    <span class="navicon glyphicon glyphicon-home" aria-hidden="true"></span>
+                </button>
+                <button type="button" onclick="zoomIn()" class="navbutton" aria-label="Left Align">
+                    <span class="navicon glyphicon glyphicon-plus" aria-hidden="true"></span>
+                </button>
+                <button type="button" onclick="zoomOut()" class="navbutton" aria-label="Left Align">
+                    <span class="navicon glyphicon glyphicon-minus" aria-hidden="true"></span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+  <div id="containment">
+    <div class="imgHolder" id="makeMeDraggable">
+    <div class="doorNo1 hvr-reveal" onclick="initialToStart()"></div>
+
+
+
+
+
+
+    <img id="imageSizer" src="../../../../img/kueche/initial.jpg" style="visibility:hidden" />
+  </div>
+</div>
+
+
+    <script src="balkon.js"></script>
+    <script src="../../../../Scripts/bootstrap.min.js"></script>
+</body>
+</html>
