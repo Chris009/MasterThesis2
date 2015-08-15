@@ -230,7 +230,7 @@ function check() {
       $(sender).css("border", "5px solid red");
       points -= 25;
     }
-
+    clearInterval(counter);
     score = points - count;
     if (score <= 0) {
       score = 0;
@@ -296,6 +296,8 @@ if(round <= 2){
 
 
 function gameUpdate() {
+  $(".timer").text("0");
+  counter = setInterval(timerStart,1000);
   var randomObj = {};
   var swapArr = [];
   count = 0;
