@@ -184,6 +184,7 @@ function check() {
     if (score <= 0) {
       score = 0;
     }
+
     congrats();
   }
 }
@@ -212,7 +213,6 @@ function nextRound() {
   } else if (round == 2) {
     roundTwoPoints = score;
     roundTwoTime = count;
-    $("#nextBtn").html("Endergebnis");
   } else {
     roundThreePoints = score;
     roundThreeTime = count;
@@ -233,12 +233,16 @@ function congrats() {
 
   var e = "<label id='congratsMessage'>Herzlichen Glückwunsch du hast Runde " + round + " absolviert! Du hast dabei " + score + " Punkte in " + count + " Sekunden erreicht!</label>";
 
-  $(".gameBox").addClass("hidden");
-  $(".congratsBox").removeClass("hidden");
+  $(".gameBox").toggleClass("hidden");
+  $(".congratsBox").toggleClass("hidden");
 
 
   $(".congratsBox").prepend(e);
+  if (round == 3){
+    $("button", "#nextBtn").toggleClass("hidden");
+    $("button", "#endScoreBtn").toggleClass("hidden");
 
+  }
 }
 
 function gameUpdate() {
@@ -306,10 +310,10 @@ function gameUpdate() {
     endGameProtocol();
   }
 }
-
+var endScore, endCounter;
 function endGameProtocol() {
-  var endScore = roundOnePoints + roundTwoPoints + roundThreePoints;
-  var endCounter = roundOneTime + roundTwoTime + roundThreeTime;
+  endScore = roundOnePoints + roundTwoPoints + roundThreePoints;
+  endCounter = roundOneTime + roundTwoTime + roundThreeTime;
   var e = "<label id='congratsMessage'>Herzlichen Glückwunsch du hast das Spiel mit " + endScore + " Punkte in insgesamt " + endCounter + " Sekunden absolviert!</label>";
   $(".gameBox").addClass("hidden");
   $(".congratsBox").removeClass("hidden");
@@ -321,5 +325,7 @@ function endGameProtocol() {
 }
 
 function home() {
+  sessionStorage.setItem("kuecheScore",endScore);
+  sessionStorage.setItem("kuecheTime",endCounter);
   window.location.replace('../../story.html');
 }

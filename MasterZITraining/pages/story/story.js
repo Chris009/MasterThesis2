@@ -12,15 +12,15 @@ function homeNav() {
 
 
 
-function sammoNav() {
+function balkonNav() {
 
-    window.location.replace('Games/SammoGame/sammo.html');
+    window.location.replace('Games/balkon/balkon.html');
 
 }
 
-function wsNav() {
+function kuecheNav() {
 
-    window.location.replace('Games/WoodstöcklGame/ws.html');
+    window.location.replace('Games/kueche/kueche.html');
 
 }
 
@@ -44,9 +44,9 @@ function getMap() {
     // ======================================= Map Boundaries
 
     var boundingBox = Microsoft.Maps.LocationRect.fromLocations(
-        new Microsoft.Maps.Location(49.4941772, 8.4666827),
-        new Microsoft.Maps.Location(49.4811188, 8.4551811),
-        new Microsoft.Maps.Location(49.4800314, 8.4778404));
+        new Microsoft.Maps.Location(54.9524996,4.5848268),
+        new Microsoft.Maps.Location(54.5466946,15.5272096),
+        new Microsoft.Maps.Location(46.9353963,10.2098268));
 
 
 //=================================Initialize Map
@@ -65,36 +65,36 @@ function getMap() {
     //============================== Push Pins
     // Retrieve the location of the map center
     //Sammo
-    var locationSammo = new Microsoft.Maps.Location(49.4859215, 8.4643577);
-    var sammoPinOptions = {
+    var locationBalkon = new Microsoft.Maps.Location(50.3315630,8.9573854);
+    var balkonPinOptions = {
         width: null, height: null,
-        htmlContent: "<div class='pushpin'>Café Sammo</div>"
+        htmlContent: "<div class='pushpin'>Balkon</div>"
     };
     //Woodstöckl
-    var locationWs = new Microsoft.Maps.Location(49.4972434, 8.4701803);
-    var wsPinOptions = {
+    var locationkueche = new Microsoft.Maps.Location(49.4972434, 8.4701803);
+    var kuechePinOptions = {
         width: null, height: null,
-        htmlContent: "<div class='pushpin'>Woodstöckl</div>"
+        htmlContent: "<div class='pushpin'>Zuhause</div>"
     };
     //Spreisel
-    var locationSpreisel = new Microsoft.Maps.Location(49.4994436, 8.4734803);
+    var locationSpreisel = new Microsoft.Maps.Location(51.0967475,10.1658815);
     var spreiselPinOptions = {
         width: null, height: null,
-        htmlContent: "<div class='pushpin'>Spreisel (fake)</div>"
+        htmlContent: "<div class='pushpin'>Spreisel</div>"
     };
 
     //AlldrinkGetränkefachmarkt
-    var locationAF = new Microsoft.Maps.Location(49.5278520, 8.4904560);
+    var locationAF = new Microsoft.Maps.Location(49.8664446,8.7596315);
     var AFPinOptions = {
         width: null, height: null,
-        htmlContent: "<div class='pushpin'>AllDrink Getränkefachmarkt</div>"
+        htmlContent: "<div class='pushpin'>Getränkemarkt</div>"
     };
 
     // Add a pin to the cafe location of the map
     //Sammo
-    var pinSammo = new Microsoft.Maps.Pushpin(locationSammo, sammoPinOptions);
+    var pinBalkon = new Microsoft.Maps.Pushpin(locationBalkon, balkonPinOptions);
     //Woodstöckl
-    var pinWs = new Microsoft.Maps.Pushpin(locationWs, wsPinOptions);
+    var pinkueche = new Microsoft.Maps.Pushpin(locationkueche, kuechePinOptions);
     //Spreisel
     var pinSpreisel = new Microsoft.Maps.Pushpin(locationSpreisel, spreiselPinOptions);
     //Alldrink
@@ -102,18 +102,18 @@ function getMap() {
 
     // Create the infobox for the pushpin
     //Sammo
-        pinSammoInfobox = new Microsoft.Maps.Infobox(pinSammo.getLocation(),
-        {title: 'Café Sammo',
+        pinBalkonInfobox = new Microsoft.Maps.Infobox(pinBalkon.getLocation(),
+        {title: 'Balkon',
         description: 'Infobox description',
-        actions: [{ label: 'GoTo Game', eventHandler: sammoNav }],
+        actions: [{ label: 'GoTo Game', eventHandler: balkonNav }],
         visible: false,
         });
     //Woodstöckl
-        pinWsInfobox = new Microsoft.Maps.Infobox(pinWs.getLocation(),
+        pinkuecheInfobox = new Microsoft.Maps.Infobox(pinkueche.getLocation(),
        {
-           title: 'Woodstöckl',
+           title: 'Zuhause',
            description: 'Infobox description',
-           actions: [{ label: 'GoTo Game', eventHandler: wsNav }],
+           actions: [{ label: 'GoTo Game', eventHandler: kuecheNav }],
            visible: false,
        });
     //Spreisel
@@ -135,9 +135,9 @@ function getMap() {
 
     // Add handler for the pushpin click event.
     //Sammo
-        Microsoft.Maps.Events.addHandler(pinSammo, 'click', displaySammoInfobox);
+        Microsoft.Maps.Events.addHandler(pinBalkon, 'click', displayBalkonInfobox);
     //Woodstöckl
-        Microsoft.Maps.Events.addHandler(pinWs, 'click', displayWsInfobox);
+        Microsoft.Maps.Events.addHandler(pinkueche, 'click', displaykuecheInfobox);
     //Spreisel
         Microsoft.Maps.Events.addHandler(pinSpreisel, 'click', displaySpreiselInfobox);
     //AF
@@ -145,9 +145,9 @@ function getMap() {
 
     // Hide the infobox when the map is moved.
     //Sammo
-    Microsoft.Maps.Events.addHandler(map, 'viewchange', hideSammoInfobox);
+    Microsoft.Maps.Events.addHandler(map, 'viewchange', hideBalkonInfobox);
     //Woodstöckl
-    Microsoft.Maps.Events.addHandler(map, 'viewchange', hideWsInfobox);
+    Microsoft.Maps.Events.addHandler(map, 'viewchange', hidekuecheInfobox);
     //Spreisel
     Microsoft.Maps.Events.addHandler(map, 'viewchange', hideSpreiselInfobox);
     //AF
@@ -155,11 +155,11 @@ function getMap() {
 
     // Add the pushpins and infobox to the map
     //Sammo
-    map.entities.push(pinSammo);
-    map.entities.push(pinSammoInfobox);
+    map.entities.push(pinBalkon);
+    map.entities.push(pinBalkonInfobox);
     //Woodstöckl
-    map.entities.push(pinWs);
-    map.entities.push(pinWsInfobox);
+    map.entities.push(pinkueche);
+    map.entities.push(pinkuecheInfobox);
     //Spreisel
     map.entities.push(pinSpreisel);
     map.entities.push(pinSpreiselInfobox);
@@ -169,16 +169,16 @@ function getMap() {
 
 }
 //Sammo
-function displaySammoInfobox(e)
-{pinSammoInfobox.setOptions({ visible:true });}
-function hideSammoInfobox(e)
-{ pinSammoInfobox.setOptions({ visible: false }); }
+function displayBalkonInfobox(e)
+{pinBalkonInfobox.setOptions({ visible:true });}
+function hideBalkonInfobox(e)
+{ pinBalkonInfobox.setOptions({ visible: false }); }
 
 //Woodstöckl
-function displayWsInfobox(e)
-{ pinWsInfobox.setOptions({ visible: true }); }
-function hideWsInfobox(e)
-{ pinWsInfobox.setOptions({ visible: false }); }
+function displaykuecheInfobox(e)
+{ pinkuecheInfobox.setOptions({ visible: true }); }
+function hidekuecheInfobox(e)
+{ pinkuecheInfobox.setOptions({ visible: false }); }
 
 //Spreisel
 function displaySpreiselInfobox(e)

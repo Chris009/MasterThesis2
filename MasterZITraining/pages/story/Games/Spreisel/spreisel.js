@@ -295,10 +295,10 @@ function gameUpdate() {
     endGameProtocol();
   }
 }
-
+var endScore, endCounter;
 function endGameProtocol() {
-  var endScore = roundOnePoints + roundTwoPoints + roundThreePoints;
-  var endCounter = roundOneTime + roundTwoTime + roundThreeTime;
+  endScore = roundOnePoints + roundTwoPoints + roundThreePoints;
+  endCounter = roundOneTime + roundTwoTime + roundThreeTime;
   var e = "<label id='congratsMessage'>Herzlichen Glückwunsch du hast das Spiel mit " + endScore + " Punkte in insgesamt " + endCounter + " Sekunden absolviert!</label>";
   $(".gameBox").addClass("hidden");
   $(".congratsBox").removeClass("hidden");
@@ -309,5 +309,7 @@ function endGameProtocol() {
 }
 
 function home() {
+  sessionStorage.setItem("spreiselScore",endScore);
+  sessionStorage.setItem("spreiselTime",endCounter);
   window.location.replace('../../story.html');
 }

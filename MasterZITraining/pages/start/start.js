@@ -10,3 +10,5 @@ function scoresNav() {
 function settingsNav() {
     window.location.replace('../settings/settings.html');
 }
+
+var test = sessionStorage.getItem("username");

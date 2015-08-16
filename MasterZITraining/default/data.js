@@ -1,31 +1,23 @@
 var data = {"users":[
   {
-  "firstName":"John",
-  "lastName":"Doe",
-  "userName":"NachtBärchi007",
+  "firstName":"Ben",
+  "lastName":"John",
+  "userName":"Benstar",
+  "password":"admin",
+  "overallScore":""
+  },
+  {
+  "firstName":"Christoph",
+  "lastName":"Ueberle",
+  "userName":"Crystal",
   "password":"admin",
   "overallScore":""
   },
   {
   "firstName":"Jane",
   "lastName":"Doe",
-  "userName":"Nacht007",
-  "password":"admirana",
-  "overallScore":""
-  },
-  {
-  "firstName":"Jane",
-  "lastName":"Doe",
-  "userName":"Day007",
-  "password":"admiranas",
-  "overallScore":""
-  },
-  {
-  "firstName":"Jane",
-  "lastName":"Doe",
-  "userName":"Nacht009",
+  "userName":"JD2002",
   "password":"admir",
   "overallScore":""
   }
-
 ]}
