@@ -90,7 +90,7 @@ var aspectRatio = panoWidth / panoHeight;
 
 function outsideIn() {
   $(".imgHolder").css("background-image", "url(../../../../img/GetraenkeMarkt/inside2.jpg)");
-  $("#imageSizer").attr("src", "../../../../img/GetraenkeMarkt/inside2.jpg")
+  $("#imageSizer").attr("src", "../../../../img/GetraenkeMarkt/inside2.jpg");
   $(".doorNo1").css("visibility", "hidden");
   $(".doorNo21").css("visibility", "visible");
   $(".doorNo21").addClass("hvr-reveal");
@@ -101,7 +101,7 @@ function outsideIn() {
 
 function insideOut() {
   $(".imgHolder").css("background-image", "url(../../../../img/GetraenkeMarkt/outside.jpg)");
-  $("#imageSizer").attr("src", "../../../../img/GetraenkeMarkt/outside.jpg")
+  $("#imageSizer").attr("src", "../../../../img/GetraenkeMarkt/outside.jpg");
   $(".doorNo1").css("visibility", "visible");
   $(".doorNo21").css("visibility", "hidden");
   $(".doorNo22").css("visibility", "hidden");
@@ -110,7 +110,7 @@ function insideOut() {
 
 function insideTwo() {
   $(".imgHolder").css("background-image", "url(../../../../img/GetraenkeMarkt/inside3.jpg)");
-  $("#imageSizer").attr("src", "../../../../img/GetraenkeMarkt/inside3.jpg")
+  $("#imageSizer").attr("src", "../../../../img/GetraenkeMarkt/inside3.jpg");
   $("#imageSizer").css("width", "2913.4px");
   $(".doorNo21").css("visibility", "hidden");
   $(".doorNo22").css("visibility", "hidden");
@@ -122,7 +122,7 @@ function insideTwo() {
 
 function insideBackTwo() {
   $(".imgHolder").css("background-image", "url(../../../../img/GetraenkeMarkt/inside2.jpg)");
-  $("#imageSizer").attr("src", "../../../../img/GetraenkeMarkt/inside2.jpg")
+  $("#imageSizer").attr("src", "../../../../img/GetraenkeMarkt/inside2.jpg");
   $(".doorNo21").css("visibility", "visible");
   $(".doorNo22").css("visibility", "visible");
   $(".doorNo31").css("visibility", "hidden");
@@ -132,7 +132,7 @@ function insideBackTwo() {
 
 function insideThree() {
   $(".imgHolder").css("background-image", "url(../../../../img/GetraenkeMarkt/inside4.jpg)");
-  $("#imageSizer").attr("src", "../../../../img/GetraenkeMarkt/inside4.jpg")
+  $("#imageSizer").attr("src", "../../../../img/GetraenkeMarkt/inside4.jpg");
   $(".doorNo31").css("visibility", "hidden");
   $(".doorNo32").css("visibility", "hidden");
   $(".doorNo41").css("visibility", "visible");
@@ -142,7 +142,7 @@ function insideThree() {
 
 function insideBackThree() {
   $(".imgHolder").css("background-image", "url(../../../../img/GetraenkeMarkt/inside3.jpg)");
-  $("#imageSizer").attr("src", "../../../../img/GetraenkeMarkt/inside3.jpg")
+  $("#imageSizer").attr("src", "../../../../img/GetraenkeMarkt/inside3.jpg");
   $(".doorNo31").css("visibility", "visible");
   $(".doorNo32").css("visibility", "visible");
   $(".doorNo41").css("visibility", "hidden");

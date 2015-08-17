@@ -19,7 +19,7 @@ $(document).ready(function () {
 
     var storageData = sessionStorage;
 
-    $(".firstTr").append("<th>Persönliche Auswertung für " + storageData.username + "</th>");
+    $(".firstTr").append("<th>Persönliche Auswertung für " + storageData.username + "</th><th></th><th></th>");
     $(".score").append("<tr><th>Zu Hause</th><th>"+storageData.kuecheScore+"</th><th>"+storageData.kuecheTime+" Sekunden</th></tr>");
     $(".score").append("<tr><th>Getränkemarkt</th><th>"+storageData.afScore+"</th><th>"+storageData.afTime+" Sekunden</th></tr>");
     $(".score").append("<tr><th>Balkon</th><th>"+storageData.balkonScore+"</th><th>"+storageData.balkonTime+" Sekunden</th></tr>");
