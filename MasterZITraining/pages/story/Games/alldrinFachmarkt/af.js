@@ -3,11 +3,11 @@
 
 var choices = [{
   title: "Bier1",
-  alk: false,
+  alk: true,
   url: "./../../../../img/GetraenkeMarkt/piece1.jpg"
 }, {
   title: "Bier2",
-  alk: false,
+  alk: true,
   url: "./../../../../img/GetraenkeMarkt/piece2.jpg"
 }, {
   title: "Bier3",
@@ -15,13 +15,35 @@ var choices = [{
   url: "./../../../../img/GetraenkeMarkt/piece3.jpg"
 }, {
   title: "Bier4",
-  alk: false,
+  alk: true,
   url: "./../../../../img/GetraenkeMarkt/piece4.jpg"
 }, {
   title: "Bier5",
   alk: true,
   url: "./../../../../img/GetraenkeMarkt/piece5.jpg"
-}, ];
+}, {
+  title: "Bionade1",
+  alk: false,
+  url: "./../../../../img/GetraenkeMarkt/piece6.jpg"
+}, {
+  title: "Bionade2",
+  alk: false,
+  url: "./../../../../img/GetraenkeMarkt/piece7.jpg"
+}, {
+  title: "Bionade3",
+  alk: false,
+  url: "./../../../../img/GetraenkeMarkt/piece8.jpg"
+},  {
+  title: "Bionade4",
+  alk: false,
+  url: "./../../../../img/GetraenkeMarkt/piece9.jpg"
+}, {
+  title: "Monster",
+  alk: false,
+  url: "./../../../../img/GetraenkeMarkt/piece10.jpg"
+},
+
+];
 
 
 
@@ -185,6 +207,7 @@ function timerStart() {
 function gameBegin() {
   counter = setInterval(timerStart, 1000);
   $(".randombox").removeClass("hidden");
+  $(".preGame").addClass("hidden");
   choicesLength = choices.length;
   count = 0;
   if (round == 1) {

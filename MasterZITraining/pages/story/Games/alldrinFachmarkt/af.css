@@ -120,6 +120,8 @@
 }
 .randombox {
   z-index: 1;
+  background-color: black;
+  height: 100%;
 }
 .gameSizer {
   position: absolute;
@@ -128,6 +130,7 @@
   width: 100%;
   height: 95%;
   z-index: 0;
+  opacity: .2;
 }
 body {
   text-align: center;
@@ -199,7 +202,7 @@ body {
   height: 216px;
   position: absolute;
   top: 7.9%;
-  left: 56%;
+  left: 54.3%;
   z-index: 1;
   background-size: cover;
   background-repeat: no-repeat;
@@ -210,7 +213,7 @@ body {
   height: 217px;
   position: absolute;
   top: 7.9%;
-  left: 66.5%;
+  left: 64%;
   z-index: 1;
   background-size: cover;
   background-repeat: no-repeat;
@@ -227,9 +230,63 @@ body {
   background-repeat: no-repeat;
   background-position: center center;
 }
+.piece6 {
+  width: 195px;
+  height: 219px;
+  position: absolute;
+  top: 40.5%;
+  left: 63.8%;
+  z-index: 1;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+.piece7 {
+  width: 192px;
+  height: 219px;
+  position: absolute;
+  top: 8%;
+  left: 44.2%;
+  z-index: 1;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+.piece8 {
+  width: 197px;
+  height: 216px;
+  position: absolute;
+  top: 8%;
+  left: 33.9%;
+  z-index: 1;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+.piece9 {
+  width: 201px;
+  height: 217px;
+  position: absolute;
+  top: 40.5%;
+  left: 53.5%;
+  z-index: 1;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+.piece10 {
+  width: 190px;
+  height: 219px;
+  position: absolute;
+  top: 7.8%;
+  left: 23.9%;
+  z-index: 1;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
 .endScreen {
   font-size: 25px;
-
 }
 .congratsBox {
   position: absolute;
@@ -237,34 +294,31 @@ body {
   height: 88.7%;
   top: 5.5%;
   left: 15%;
-
   padding: 2%;
   background-color: rgba(50, 50, 50, 1);
-
 }
 .congratsBox label {
   font-size: 40px;
   color: white;
 }
-.congratsBox button{
+.congratsBox button {
   font-size: 20px;
 }
-.preGame{
+.preGame {
   width: 100%;
   height: 110%;
   background-color: rgba(50, 50, 50, 1);
   margin-top: -1%;
 }
-.description{
+.description {
   font-size: 40px;
   color: white;
 }
-
-.timer{
+.timer {
   font-size: 20px;
   color: black;
   position: absolute;
-  top:6%;
+  top: 6%;
   right: 0;
   border: 5px solid black;
   background-color: white;
