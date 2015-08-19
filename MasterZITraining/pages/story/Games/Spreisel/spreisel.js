@@ -174,8 +174,8 @@ var points = 50;
 var round = 1;
 var score = 0;
 
-function check() {
-  var sender = $(window.event.target);
+function check(obj) {
+  var sender = (obj || window.event.target);
   var attribute = $(sender).attr("value");
   checksum++;
   if (checksum <= 1) {

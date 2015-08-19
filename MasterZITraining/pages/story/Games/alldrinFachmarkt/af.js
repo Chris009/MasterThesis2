@@ -231,9 +231,9 @@ function gameBegin() {
 var checksum = 0;
 var points = 50;
 
-function check() {
+function check(obj) {
 
-  var sender = $(window.event.target);
+  var sender = (obj || window.event.target);
   var attribute = $(sender).attr("value");
   checksum++;
   if (checksum <= 1) {
