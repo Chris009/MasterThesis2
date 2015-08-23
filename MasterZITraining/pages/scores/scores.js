@@ -26,6 +26,21 @@ $(document).ready(function () {
     $(".score").append("<tr><th>Spreisel</th><th>"+storageData.spreiselScore+"</th><th>"+storageData.spreiselTime+" Sekunden</th></tr>");
 
 
+
+    var scores = {
+      username: storageData.username,
+      kuecheScore: storageData.kuecheScore,
+      kuecheTime: storageData.kuecheTime,
+      afScore: storageData.afScore,
+      afTime: storageData.afTime,
+      balkonScore: storageData.balkonScore,
+      balkonTime: storageData.balkonTime,
+      spreiselScore: storageData.spreiselScore,
+      spreiselTime: storageData.spreiselTime
+    };
+
+    $.post("http://46.101.202.146:8080/scores", scores);
+
 });
 
 
