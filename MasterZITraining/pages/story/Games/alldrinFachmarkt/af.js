@@ -335,8 +335,8 @@ function gameUpdate() {
       cssURL = cssURL.replace('url(', '').replace(')', '');
 
       arrObj = {
-        title: $(".piece" + i).title,
-        alk: $(".piece" + i).value,
+        title: $(".piece" + i).attr('title'),
+        alk: $(".piece" + i).attr('value'),
         url: cssURL
       }
       swapArr.push(arrObj);
