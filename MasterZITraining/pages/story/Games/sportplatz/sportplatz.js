@@ -65,18 +65,14 @@ function homeNav() {
 
 
 $(document).ready(function() {
-
   $("#imageSizer").css("width", $(window).width()* 1.2);
 
   resize();
-
 
   $('#makeMeDraggable').draggable({
     containment: '#containment',
     cursor: 'move'
   });
-
-
 });
 
 
@@ -84,9 +80,6 @@ $(document).ready(function() {
 function resize() { //init
   $("body").addClass("stop-scrolling");
   imgPanorama = $('#imageSizer');
-
-
-
 
   var widthContainer = ($(imgPanorama).width() + ($(imgPanorama).width() - $(window).width()));
   var heightContainer = ($(imgPanorama).height() + ($(imgPanorama).height() - $(window).height()));
