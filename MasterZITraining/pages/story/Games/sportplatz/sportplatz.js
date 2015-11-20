@@ -166,6 +166,13 @@ function check(obj) {
   var sender = (obj || window.event.target);
   var attribute = $(sender).attr("value");
   checksum++;
+
+  $(sender).css("pointer-events", "none");
+  setTimeout(unlock, 3000);
+  function unlock() {
+    $(sender).css("pointer-events", "auto");
+  }
+
   if (checksum <= 1) {
     if (attribute == "false") {
       $(sender).css("border", "5px solid rgb(25, 255, 25)");

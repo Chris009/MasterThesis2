@@ -28,7 +28,7 @@ function homeNav() {
 
 var j = 0;
 function gameStart() {
-    
+
     for (var i = choices.length; i >= 1; i--) {
         var choice = choices[Math.floor(Math.random() * choices.length)];
 
@@ -38,9 +38,9 @@ function gameStart() {
         var e = $('<img></img>');
         e.attr('class', 'choice ' + i);
         e.attr('src', URL);
-      
+
         $('.randomBox').append(e);
-        
+
 
 
     }
@@ -61,4 +61,3 @@ function startOrder() {
     $('.randomBox').removeClass('hidden');
     gameStart()
 }
-

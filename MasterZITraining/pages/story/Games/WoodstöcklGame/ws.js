@@ -29,7 +29,7 @@ var imgPanorama;
 var divXstart, divYstart, backgroundX, backgroundY;
 $(document).ready(function () {
 
- 
+
    	resize();
 
 
@@ -38,7 +38,7 @@ $(document).ready(function () {
         cursor: 'move'
     });
 
-   
+
 });
 
 
@@ -46,8 +46,8 @@ function resize() {
     //init
     $("body").addClass("stop-scrolling");
     imgPanorama = $('.imgHolder');
-    
-   
+
+
 
 
     var widthContainer = ($(imgPanorama).width() + ($(imgPanorama).width() - $(window).width()));
