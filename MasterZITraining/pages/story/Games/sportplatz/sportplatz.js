@@ -168,7 +168,7 @@ function check(obj) {
   checksum++;
 
   $(sender).css("pointer-events", "none");
-  setTimeout(unlock, 3000);
+  setTimeout(unlock, 200);
   function unlock() {
     $(sender).css("pointer-events", "auto");
   }
